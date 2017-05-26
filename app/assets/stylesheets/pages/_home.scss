@@ -1,0 +1,235 @@
+.cover {
+  background-color: $cloud;
+  height: 606px;
+}
+
+.big-buttons a {
+  color: #fff;
+}
+
+.give-btn a, .receive-btn a {
+  background-color: $red-blood;
+  bottom: 15px;
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  margin: 25px 15px;
+  padding: 0 10px;
+  position: absolute;
+  text-align: center;
+  width: 400px;
+}
+
+.give-btn a {
+  left: 20%;
+  transform: translateX(-20%);
+}
+
+.receive-btn a {
+  left: 80%;
+  transform: translateX(-80%);
+}
+
+.campaigns {
+  height: 700px;
+  position: relative;
+}
+
+.campaign-header {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+.campaign-cover {
+  height: 500px;
+  position: relative;
+}
+
+.campaign-description {
+  background-color: $red-blood;
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  height: 200px;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 30%;
+}
+
+.campaign-evidence {
+  background-color: $red-blood;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+  position: absolute;
+}
+
+.our-numbers {
+  height: 200px;
+}
+
+.our-item {
+  display: inline-block;
+  line-height: 200px;
+  text-align: center;
+  width: 33%;
+}
+
+.testimony {
+  background-color: $cloud;
+  height: 375px;
+}
+
+.testimony-evidence {
+  height: 375px;
+  width: 100%;
+}
+
+.testimony-left {
+  background-color: $red-blood;
+  display: inline-block;
+  height: 375px;
+  width: 49.8%;
+}
+
+.testimony-right {
+  background-color: $red-blood;
+  display: inline-block;
+  height: 375px;
+  width: 49.8%;
+}
+
+.sponsors {
+  background-color: #fff;
+  height: 300px;
+  position: relative;
+}
+
+.sponsors-container {
+  height: 100px;
+  left: 50%;
+  margin: 25px 0;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 90%;
+}
+
+.brand {
+  background-color: $cloud;
+  border-radius: 3px;
+  box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  display: inline-block;
+  height: 70px;
+  line-height: 70px;
+  margin: 15px 20px;
+  text-align: center;
+  width: 21.2%;
+}
+
+.nike:hover {
+  color: #fff;
+  background-color: #e2142d; }
+.apple:hover {
+  color: #fff;
+  background-color: #575757; }
+.tesla:hover {
+  color: #fff;
+  background-color: #cc0000; }
+.nasa:hover {
+  color: #fff;
+  background-color: #15418c; }
+.uber:hover {
+  color: #fff;
+  background-color: #09091a; }
+.amazon:hover {
+  color: #fff;
+  background-color: #ff9900; }
+.yahoo:hover {
+  color: #fff;
+  background-color: #410093; }
+.mcdonalds:hover {
+  color: #fff;
+  background-color: #ffc600; }
+
+.sponsor-us a {
+  background-color: $red-blood;
+  bottom: 25px;
+  color: #fff;
+  display: inline-block;
+  left: 50%;
+  line-height: 40px;
+  padding: 0 10px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.more-about-us {
+  height: 422px;
+}
+
+.more-left {
+  background-color: $red-blood;
+  box-shadow: 4px 0px 3px -1px rgba(0, 0, 0, 0.25);
+  display: inline-block;
+  height: 422px;
+  margin: -4px 0;
+  position: relative;
+  width: 39.61%;
+}
+
+.more-title {
+  color: #fff;
+  font-size: 30px;
+  margin: 0;
+  padding: 20px;
+  position: absolute;
+  text-align: right;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.more-right {
+  display: inline-block;
+  height: 422px;
+  margin-bottom: -3px;
+  position: relative;
+  width: 60%;
+}
+
+.more-btn a {
+  bottom: 30px;
+  display: inline-block;
+  left: 50%;
+  line-height: 60px;
+  padding: 0 40px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.social-networks {
+  background-color: $cloud;
+  height: 100px;
+}
+
+.social-item {
+  display: inline-block;
+  line-height: 100px;
+  margin-right: -5px;
+  text-align: center;
+  width: 33.33%;
+}
+
+.facebook:hover {
+  color: #fff;
+  background-color: #3b5998; }
+.twitter:hover {
+  color: #fff;
+  background-color: #1da1f2; }
+.instagram:hover {
+  color: #fff;
+  background-color: #e1306c; }

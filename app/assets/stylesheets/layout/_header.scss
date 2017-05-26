@@ -1,0 +1,53 @@
+.dc-header {
+  background-color: $white;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
+  height: 90px;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  background-color: $red-blood;
+  color: $white;
+  display: inline-block;
+  float: left;
+  height: 60px;
+  line-height: 60px;
+  margin: 15px;
+  text-align: center;
+  width: 150px;
+}
+
+.navigation {
+  display: inline-block;
+  left: 50%;
+  margin: 15px;
+  padding: 0;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  display: inline-block;
+  list-style: none;
+  margin-left: -5px;
+}
+
+.nav-link a {
+  border-radius: 3px;
+  display: inline-block;
+  line-height: 60px;
+  padding: 0 20px;
+}
+
+.nav-link a:hover {
+  background-color: $cloud;
+}
+
+.ayudar-btn a {
+  display: inline-block;
+  float: right;
+  line-height: 40px;
+  margin: 25px 15px;
+  padding: 0 10px;
+}

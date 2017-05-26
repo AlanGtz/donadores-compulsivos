@@ -1,0 +1,36 @@
+.video {
+  background-color: $cloud;
+  position: relative;
+}
+
+.support-title {
+  display: inline-block;
+  left: 10%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-10%, -50%);
+}
+
+.scared {
+  position: relative;
+}
+
+.scared-title {
+  padding: 60px;
+  text-align: center;
+}
+
+.donate-btn {
+  bottom: 60px;
+  display: inline-block;
+  left: 50%;
+  line-height: 60px;
+  padding: 0 40px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.support-form {
+  display: inline-block;
+}

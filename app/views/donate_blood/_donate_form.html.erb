@@ -1,0 +1,11 @@
+<%= form_tag('/donate_blood') do %>
+
+  <%= label_tag :name, 'Nombre', class: 'label' %>
+  <%= text_field_tag(:nombre) + tag(:br) %>
+  <%= label_tag :city, 'Ciudad', class: 'label' %>
+  <%= text_field_tag(:city) + tag(:br) %>
+  <%= label_tag :email, 'Email', class: 'label' %>
+  <%= email_field(:user, :email) + tag(:br) %>
+  <%= submit_tag 'Donar', class: 'submit flat-btn' %>
+
+<% end %>

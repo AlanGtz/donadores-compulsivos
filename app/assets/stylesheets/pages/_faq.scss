@@ -1,0 +1,35 @@
+.faq-title {
+  padding-top: 60px; 
+  text-align: center;
+}
+
+.index {
+  position: fixed;
+  width: 30%;
+}
+
+.link {
+  list-style: none;
+  padding: 6px;
+}
+
+.faq {
+  box-sizing: border-box;
+  margin-left: 30%;
+  padding: 0 50px 60px;
+  width: 70%;
+}
+
+.subject {
+  text-transform: uppercase;
+}
+
+.question {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.answer {
+  font-size: 14px;
+  line-height: 20px;
+}

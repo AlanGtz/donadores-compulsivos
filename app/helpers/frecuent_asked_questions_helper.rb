@@ -1,0 +1,2 @@
+module FrecuentAskedQuestionsHelper
+end
