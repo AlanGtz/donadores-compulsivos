@@ -6,8 +6,11 @@ Rails.application.routes.draw do
   get 'support_us', to: 'support_us#support_us'
   get 'donate_money', to: 'donate_money#donate'
   get 'donate', to: 'donate_blood#donate'
+  get 'find_donors', to: 'find_donors#find_donors'
 
+  post 'contact_mail', to: 'contact#contact'
   post 'donate_blood', to: 'donate_blood#donate_blood'
+  post 'find_form', to: 'find_donors#find_form'
 
   root 'home#index'
 end

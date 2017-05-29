@@ -64,14 +64,10 @@
 
 .be-part-btn {
   left: 50%;
+  line-height: 70px;
+  margin: 25px 15px;
+  padding: 0 40px;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-.be-part-btn a {
-  color: $white;
-  line-height: 70px;
-  margin: 25px 15px;
-  padding: 0 10px;
 }

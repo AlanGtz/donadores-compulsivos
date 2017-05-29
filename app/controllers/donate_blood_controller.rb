@@ -6,6 +6,6 @@ class DonateBloodController < ApplicationController
   	name = params[:name]
   	city = params[:city]
   	email = params[:email]
-  	ContactMailer.mailer(name, city, email).deliver_now
+  	ContactMailer.donate_blood(name, city, email).deliver_now
   end
 end
