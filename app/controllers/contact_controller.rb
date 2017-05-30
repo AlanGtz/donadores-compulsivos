@@ -7,7 +7,7 @@ class ContactController < ApplicationController
   	phone = params[:person][:phone]
   	email = params[:person][:email]
   	message = params[:person][:message]
-  	ContactMailer.contact_request(name, phone, email, message)
+  	ContactMailer.contact(name, phone, email, message)
   	redirect_to home_path, alert: 'Email enviado'
   end
 end
