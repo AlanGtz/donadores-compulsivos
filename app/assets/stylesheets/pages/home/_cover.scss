@@ -1,0 +1,58 @@
+.cover {
+  background: url('donadores-cover.png') 0 -50px/cover no-repeat;
+  height: 606px;
+  position: relative;
+}
+
+.cover-paragraph {
+  color: $white;
+  padding: 70px 0 0 60px;
+  width: 480px;
+
+  .cover-title {
+    font-size: 50px;
+    font-weight: initial;
+    line-height: 50px;
+    margin: 5px 0;
+    text-transform: uppercase;
+  }
+
+  .cover-text {
+    font-size: 18px;
+    margin: 0;
+    width: 330px;
+  }
+}
+
+.big-buttons {
+  @include centerer(true, false);
+
+  bottom: 0;
+  min-width: 660px;
+  width: 52%;
+}
+
+.give-btn a, .receive-btn a {
+  background-color: $red-blood;
+  border-radius: 15px;  
+  bottom: 15px;
+  color: $white;
+  display: inline-block;
+  font-size: 25px;
+  font-weight: bold;
+  height: 70px;
+  line-height: 70px;
+  margin: 25px 15px;
+  padding: 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 300px;
+}
+
+.give-btn a {
+  float: left;
+}
+
+.receive-btn a {
+  float: right;
+}

@@ -1,0 +1,49 @@
+.our-numbers {
+  background-color: $black;
+  height: 200px;
+}
+
+.our-item {
+  display: inline-block;
+  height: 200px;
+  margin-right: -4px;
+  position: relative;
+  text-align: center;
+  width: 33.333333%;
+
+  .our-center {
+  	@include centerer(true, true);
+
+  	height: 78px;
+  	min-width: 208px;
+  }
+}
+
+.our-icon {
+  background-color: $red-blood;
+  border-radius: 50%;
+  display: inline-block;
+  height: 78px;
+  width: 78px;
+}
+
+.our-text {
+  color: $white;
+  display: inline-block;
+  float: right;
+  font-weight: lighter;
+  margin-left: 15px;
+
+  .our-number {
+  	border-bottom: solid 1px $white;
+  	height: 33px;
+  	font-size: 30px;
+  	margin: 0 10px;
+  }
+
+  .our-description {
+  	height: 45px;
+  	font-size: 20px;
+  	text-transform: uppercase;
+  }
+}

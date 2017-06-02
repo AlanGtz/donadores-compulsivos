@@ -1,1 +1,41 @@
-<footer class="dc-footer">Donadores Compulsivos ®</footer>
+<footer class="dc-footer">
+  <div class="footer-wave"></div>
+  <div class="footer-social">
+    <div class="footer-center">
+      <div class="footer-item">
+        <%= link_to image_tag('facebook.png'), 'facebook.com', class: 'footer-facebook footer-snlink circle' %>
+      </div>
+      <div class="footer-item">
+        <%= link_to image_tag('instagram.png'), 'instagram.com', class: 'footer-instagram footer-snlink circle' %>
+      </div>
+      <div class="footer-item">
+        <%= link_to image_tag('twitter.png'), 'twitter.com', class: 'footer-twitter footer-snlink circle' %>
+      </div>
+    </div>	
+  </div>
+  <div class="footer-column">
+  	<div class="footer-center-col">
+  	  <h4 class="footer-title">Contacto</h4>
+  	  <p class="footer-paragraph">Av. Lorem Ipsum #000</p>
+  	  <p class="footer-paragraph">Colima, Col., Méx.</p>
+  	  <p class="footer-paragraph">(312) 000 00 00</p>
+  	  <p class="footer-paragraph">donadores@compulsivos.org</p>
+  	</div>
+  </div>
+  <div class="footer-column">
+  	<div class="footer-center-col">
+  	  <h4 class="footer-title">Política de privacidad</h4>
+  	  <p class="footer-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+  	</div>
+  </div>
+  <div class="footer-column">
+  	<div class="footer-center-col">
+  	  <h4 class="footer-title">Navegación</h4>
+  	  <p class="footer-paragraph"><%= link_to 'Inicio', home_path %></p>
+  	  <p class="footer-paragraph"><%= link_to 'Sobre DC', about_us_path %></p>
+  	  <p class="footer-paragraph"><%= link_to 'Blog', root_path %></p>
+  	  <p class="footer-paragraph"><%= link_to 'Contacto', contact_path %></p>
+  	  <p class="footer-paragraph"><%= link_to 'FAQ', faq_path %></p>
+  	</div>
+  </div>
+</footer>

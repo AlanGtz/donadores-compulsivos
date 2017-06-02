@@ -1,27 +1,24 @@
 .dc-header {
-  background-color: $white;
+  background-color: $black;
   box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.25);
-  height: 90px;
+  height: 60px;
   position: relative;
   width: 100%;
 }
 
 .logo {
-  background-color: $red-blood;
-  color: $white;
+  background: url('donadores-logo.svg') no-repeat;
   display: inline-block;
   float: left;
-  height: 60px;
-  line-height: 60px;
+  height: 30px;
   margin: 15px;
-  text-align: center;
-  width: 150px;
+  width: 214px;
 }
 
 .navigation {
   display: inline-block;
   left: 50%;
-  margin: 15px;
+  margin: 21px;
   padding: 0;
   position: absolute;
   transform: translateX(-50%);
@@ -31,23 +28,37 @@
   display: inline-block;
   list-style: none;
   margin-left: -5px;
-}
 
-.nav-link a {
-  border-radius: 3px;
-  display: inline-block;
-  line-height: 60px;
-  padding: 0 20px;
+  a {
+    border-right: solid 1px $white;
+    color: $white;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 13px;
+    line-height: 15px;
+    padding: 0 20px;
+    text-transform: uppercase;
+  }
+
+  &:last-of-type {
+    a {
+      border: none;
+    }
+  }
 }
 
 .nav-link a:hover {
-  background-color: $cloud;
+  color: $red-blood;
 }
 
 .ayudar-btn a {
   display: inline-block;
   float: right;
+  font-size: 18px;
   line-height: 40px;
-  margin: 25px 15px;
-  padding: 0 10px;
+  margin: 10px 15px;
+  padding: 0 30px;
+  text-shadow: none;
+  text-transform: uppercase;
 }

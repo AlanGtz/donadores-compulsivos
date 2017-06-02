@@ -20,7 +20,8 @@
   'abstracts/variables',
   'abstracts/colors',
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/centerer';
 
 // 2. Vendors
 @import
@@ -30,6 +31,7 @@
 @import
   'base/fonts',
   'base/base',
+  'base/grid',
   'base/typography',
   'base/helpers';
 
@@ -45,7 +47,11 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home',
+  'pages/home/cover',
+  'pages/home/campaigns',
+  'pages/home/our_numbers',
+  'pages/home/testimony',
+  'pages/home/sponsors',
   'pages/about_dc',
   'pages/contact',
   'pages/faq',

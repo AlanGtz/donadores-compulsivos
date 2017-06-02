@@ -1,7 +1,67 @@
 .dc-footer {
   background-color: $black;
   color: $white;
-  height: 150px;
-  line-height: 150px;
-  text-align: center;
+  position: relative;
+  height: 400px;
+
+  .footer-wave {
+  	background: url('wave.svg') 0/cover no-repeat;
+  	height: 60px;
+  	position: absolute;
+  	top: -59px;
+  	width: 100%;
+  }
+
+  .footer-social {
+  	height: 140px;
+  	width: 100%;
+  }
+
+  .footer-center {
+  	@include centerer(true, false);
+
+  	border-bottom: solid 1px $smoke;
+  	height: inherit;
+  	width: 600px;
+
+  	.footer-item {
+  	  display: inline-block;
+  	  margin-right: -4px;
+  	  position: relative;
+  	  width: 33.333333%;
+  	}
+  }
+}
+
+.footer-snlink {
+  @include centerer(true, false);
+
+  height: 90px;
+  width: 90px;
+}
+
+.footer-column {
+  color: $white;
+  display: inline-block;
+  margin-right: -4px;
+  position: relative;
+  width: 33.333333%;
+
+  .footer-center-col {
+  	@include centerer(true, false);
+  }
+
+  .footer-title {
+  	font-size: 17px;
+  	font-weight: initial;
+  	text-transform: uppercase;
+  }
+
+  .footer-paragraph {
+  	font-size: 12px;
+
+  	a {
+  	  color: $white;
+  	}
+  }
 }
