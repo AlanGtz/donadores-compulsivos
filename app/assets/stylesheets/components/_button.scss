@@ -11,3 +11,17 @@
   box-shadow: none;
   cursor: pointer;
 }
+
+.play-btn {
+  @include centerer(true, true);
+
+  background: url('play-icon.svg');
+  cursor: pointer;
+  height: 70px;
+  opacity: 0.7;
+  width: 70px;
+
+  &:hover {
+  	opacity: 1;
+  }
+}

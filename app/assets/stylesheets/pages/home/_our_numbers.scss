@@ -4,18 +4,20 @@
 }
 
 .our-item {
+  @include make-sm-column(4);
+
   display: inline-block;
   height: 200px;
   margin-right: -4px;
+  padding: 0;
   position: relative;
   text-align: center;
-  width: 33.333333%;
 
   .our-center {
   	@include centerer(true, true);
 
   	height: 78px;
-  	min-width: 208px;
+  	min-width: 215px;
   }
 }
 
@@ -42,6 +44,7 @@
   }
 
   .our-description {
+    font-family: $light;
   	height: 45px;
   	font-size: 20px;
   	text-transform: uppercase;

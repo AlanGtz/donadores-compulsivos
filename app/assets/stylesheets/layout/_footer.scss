@@ -13,22 +13,14 @@
   }
 
   .footer-social {
-  	height: 140px;
-  	width: 100%;
-  }
-
-  .footer-center {
-  	@include centerer(true, false);
+    @include make-sm-column(6);
+    @include make-sm-column-offset(3);
 
   	border-bottom: solid 1px $smoke;
-  	height: inherit;
-  	width: 600px;
+    height: 130px;
 
   	.footer-item {
-  	  display: inline-block;
-  	  margin-right: -4px;
-  	  position: relative;
-  	  width: 33.333333%;
+  	  @include make-sm-column(4);
   	}
   }
 }
@@ -41,11 +33,10 @@
 }
 
 .footer-column {
+  @include make-sm-column(4);
+
   color: $white;
-  display: inline-block;
-  margin-right: -4px;
-  position: relative;
-  width: 33.333333%;
+  margin-top: 40px;
 
   .footer-center-col {
   	@include centerer(true, false);
@@ -58,6 +49,7 @@
   }
 
   .footer-paragraph {
+    font-family: $light;
   	font-size: 12px;
 
   	a {

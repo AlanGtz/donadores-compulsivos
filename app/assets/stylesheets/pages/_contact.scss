@@ -1,60 +1,69 @@
 .contact {
-  position: relative;
-}
-
-.donate-form {
-  left: 10%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-10%, -50%);
-}
-
-.contact-container {
-  background-color: $cloud;
-  border-radius: 3px;
-  box-shadow: 1px 2px 3px -1px rgba(0, 0, 0, 0.25);
-  left: 75%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-75%, -50%);
-  width: 50%;
-}
-
-.contact-image {
   background-color: $red-blood;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  height: 400px;
-  position: relative;
-}
 
-.info {
-  bottom: 0;
-  line-height: 25px;
-  margin: 10px;
-  position: absolute;
-}
+  .contact-title {
+    @include centerer(true, false);
 
-.social-networks {
-  height: 100px;
-}
+    color: $white;
+    font-size: 50px;
+    font-weight: lighter;
+    margin: 8% 0 50px;
+    text-transform: uppercase;
+  }
 
-.social-item {
-  display: inline-block;
-  line-height: 100px;
-  margin-right: -5px;
-  text-align: center;
-  width: 33.35%;
-}
+  .contact-wrapper {
+    @include make-sm-column(7);
+    @include centerer(true, true);
 
-.facebook:hover {
-  color: #fff;
-  background-color: #3b5998;
-  border-bottom-left-radius: 3px; }
-.twitter:hover {
-  color: #fff;
-  background-color: #1da1f2; }
-.instagram:hover {
-  color: #fff;
-  background-color: #e1306c;
-  border-bottom-right-radius: 3px; }
+    margin-top: 60px;
+
+    .contact-left {
+      @include make-sm-column(6);
+
+      padding: 0 10px 0 0;
+    }
+
+    .contact-right {
+      @include make-sm-column(6);
+
+      padding: 0 0 0 10px;
+
+      .contact-field {
+        max-height: 205px;
+        min-height: 205px;
+        max-width: 100%;
+        min-width: 100%;
+      }
+    }
+
+    .contact-field {
+      border: none;
+      border-radius: 5px;
+      font-family: $light;
+      height: 55px;
+      margin: 10px 0;
+      padding: 20px;
+      width: 100%;
+    }
+
+    .contact-submit {
+      background-color: transparent;
+      border: solid 1px $white;
+      border-radius: 5px;
+      color: $white;
+      cursor: pointer;
+      float: right;
+      font-family: $light;
+      font-size: 10px;
+      font-weight: bold;
+      margin: 10px 0 0;
+      padding: 8px 40px;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: $white;
+        color: $red-blood;
+      }
+    }
+  }
+}

@@ -1,13 +1,14 @@
-<%= form_tag('/contact_mail') do %>
-
-  <%= label_tag :name, 'Nombre', class: 'label' %>
-  <%= text_field 'person', 'name' %><%= tag(:br) %>
-  <%= label_tag :phone, 'Telefono', class: 'label' %>
-  <%= telephone_field(:person, :phone) + tag(:br) %>
-  <%= label_tag :email, 'Email', class: 'label' %>
-  <%= email_field(:person, :email) + tag(:br) %>
-  <%= label_tag :message, 'Ciudad', class: 'label' %>
-  <%= text_field 'person', 'message' %><%= tag(:br) %>
-  <%= submit_tag 'Donar', class: 'submit flat-btn' %>
-
-<% end %>
+<h1 class="contact-title">Contáctanos</h1>
+<div class="contact-wrapper">
+  <%= form_tag('/contact_mail') do %>
+  	<div class="contact-left">
+  	  <%= text_field 'person', 'name', class: 'contact-field', placeholder: 'Nombre' %><%= tag(:br) %>
+  	  <%= telephone_field(:person, :phone, class: 'contact-field', placeholder: 'Teléfono') + tag(:br) %>
+  	  <%= email_field(:person, :email, class: 'contact-field', placeholder: 'e-mail') + tag(:br) %>
+  	</div>
+  	<div class="contact-right">
+  	  <%= text_area 'person', 'message', class: 'contact-field', placeholder: 'Mensaje' %><%= tag(:br) %>
+  	</div>
+  	<%= submit_tag 'Enviar', class: 'contact-submit' %>
+  <% end %>
+</div>

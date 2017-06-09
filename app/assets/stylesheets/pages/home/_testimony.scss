@@ -1,34 +1,39 @@
 .testimony-title {
+  @include make-sm-column(3);
+  @include make-sm-column-offset(0.5);
+
   color: $red-blood;
-  display: inline-block;
-  float: left;
-  font-size: 80px;
-  line-height: 60px;
-  padding: 100px 0 0 60px;
+  font-size: 50px;
+  line-height: 40px;
+  padding-top: 8%;
   text-transform: uppercase;
-  width: 360px;
 }
 
 .testimony-cards {
+  @include make-sm-column(7);
   @include centerer(false, true);
 
-  display: inline-block;
-  height: 500px;
-  margin: 20px;
+  padding-bottom: 38%;
   position: relative;
-  width: 60%;
 }
 
 .card {
-  background-color: $ashes;
+  @include make-sm-column(9);
+
+  background-color: $cloud;
   border-radius: 20px;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
   color: $white;
-  height: 410px;
+  padding-bottom: 50%;
   position: absolute;
-  width: 640px;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: translateX(10px);
+  }
 
   .testimony-text {
+    font-family: $light;
     margin: 50px;
     position: absolute;
     right: 0;
@@ -44,7 +49,9 @@
 }
 
 .card-2 {
-  @include centerer(true, true)
+  @include make-sm-column-offset(1.5);
+
+  top: 12%;
 }
 
 .card-3 {
