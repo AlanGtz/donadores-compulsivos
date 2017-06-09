@@ -1,0 +1,66 @@
+.sponsor-us {
+  background-color: $grey-bg;
+}
+
+.brand-wrapper {
+  @include make-sm-column(9);
+  @include make-sm-column-offset(1.5);
+  @include centerer(false, true);
+
+  border: solid 2px $cloud;
+  border-radius: 20px;
+  padding: 30px 30px 3%;
+  position: relative;
+
+  .brand-title {
+  	@include centerer(true, false);
+
+  	background-color: $grey-bg;
+  	display: inline-block;
+  	font-size: 50px;
+  	font-weight: lighter;
+  	margin: -60px auto 0;
+  	padding: 0 35px;
+  	text-transform: uppercase;
+  }
+
+  .brand-item {
+  	@include make-sm-column(3);
+
+  	background: url('brand-logo-1.svg') 50% 50%/60% 60% no-repeat;
+  	padding: 0 0 14%;
+  }
+}
+
+.be-sponsor {
+  background-color: $grey-bg;
+  position: relative;
+
+  .be-sponsor-btn {
+    @include make-sm-column-offset(2.5);
+
+    background-color: $red-blood;
+    border-radius: 15px;  
+    color: $white;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: lighter;
+    padding: 25px 85px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 40%;
+    z-index: 50;
+  }
+
+  .be-sponsor-bg {
+    @include make-sm-column(8);
+    @include make-sm-column-offset(2.5);
+
+    bottom: 0;
+    mix-blend-mode: multiply;
+    padding-top: 50%;
+    position: absolute;
+
+    background: url('sponsor-bg.png') 0 0/cover;
+  }
+}

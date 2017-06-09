@@ -1,0 +1,41 @@
+.sponsors {
+  background-color: $red-blood;
+}
+
+.brands {
+  background: url('brands.svg');
+  height: 650px;
+  position: relative;
+  width: 100%;
+}
+
+.sponsor-wrapper {
+  @include centerer(true, true);
+
+  text-align: center; 
+}
+
+.sponsor-title {
+  color: $white;
+  font-size: 80px;
+  font-weight: lighter;
+  margin: 0 0 20px;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.sponsor-btn {
+  background-color: $white;
+  border-radius: 4px;
+  color: $red-blood;
+  font-size: 18px;
+  padding: 8px 14px;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $white;
+    background-color: transparent;
+    border: solid 2px $white;
+    padding: 6px 12px;
+  }
+}

@@ -2,26 +2,13 @@ class ContactMailer < ApplicationMailer
   default from: 'ahgv1195@gmail.com'
   default from_name: 'Donadores Compulsivos'
 
-  def self.contact_request(name, phone, email, message)
-    @name = name
-    @phone = phone
-    @email = email
-    @message = message
-
-    emails = ['ahgv1195@gmail.com', @email]
-    
-    emails.each do |name, phone, email, message|
-      contact(name, phone, email, message).deliver_now      
-    end
-  end
-
   def contact(name, phone, email, message)
     @name = name
     @phone = phone
     @email = email
     @message = message
-    mail(to: @email,
-         subject: 'We\'ll contact you soon.',
+    mail(to: 'ahgv1195@gmail.com',
+         subject: 'Nuevo mensaje de contacto',
          template_path: 'contact_mailer',
          template_name: 'contact')
   end
@@ -30,8 +17,8 @@ class ContactMailer < ApplicationMailer
     @name = name
     @city = city
     @email = email
-    mail(to: email,
-         subject: 'Thank you vato.',
+    mail(to: 'ahgv1195@gmail.com',
+         subject: 'Nuevo donador',
          template_path: 'contact_mailer',
          template_name: 'donate_blood')
   end
@@ -45,8 +32,8 @@ class ContactMailer < ApplicationMailer
   	@address = address
   	@hours = hours
   	@email = email
-    mail(to: email,
-         subject: 'We\'ll find a way to keep you away from the grim reaper',
+    mail(to: 'ahgv1195@gmail.com',
+         subject: 'Alguien necesita sangre',
          template_path: 'contact_mailer',
          template_name: 'find_blood')
   end

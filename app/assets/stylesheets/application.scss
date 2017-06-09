@@ -20,7 +20,8 @@
   'abstracts/variables',
   'abstracts/colors',
   'abstracts/functions',
-  'abstracts/mixins';
+  'abstracts/mixins',
+  'abstracts/centerer';
 
 // 2. Vendors
 @import
@@ -30,6 +31,7 @@
 @import
   'base/fonts',
   'base/base',
+  'base/grid',
   'base/typography',
   'base/helpers';
 
@@ -45,10 +47,17 @@
 
 // 6. Page-specific styles
 @import
-  'pages/home',
-  'pages/about_dc',
+  'pages/home/cover',
+  'pages/home/campaigns',
+  'pages/home/our_numbers',
+  'pages/home/testimony',
+  'pages/home/sponsors',
+  'pages/about_DC/what_we_do',
+  'pages/about_DC/our_values',
+  'pages/about_DC/be_part',
   'pages/contact',
   'pages/faq',
+  'pages/sponsors',
   'pages/support_us';
 
 // 7. Themes

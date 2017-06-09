@@ -1,0 +1,67 @@
+.our-values {
+  background-color: $black;
+  position: relative;
+}
+
+.our-wave {
+  background: url('wave.svg') 0/cover no-repeat;
+  height: 60px;
+  position: absolute;
+  top: -59px;
+  width: 100%;
+}
+
+.our-left {
+  @include make-sm-column(6);
+
+  height: 100%;
+
+  .mission {
+  	@include centerer(false, true);
+
+  	border: solid 2px $white;
+  	border-right: none;
+  	color: $white;
+  	margin-right: 10px;
+  	margin-top: 50px;
+  	max-width: 300px;
+  	padding: 40px 0 40px 30px;
+  	position: absolute;
+  	right: 0;
+  	text-align: right;
+  	width: 80%;
+  }
+}
+
+.our-right {
+  @include make-sm-column(6);
+
+  height: 100%;
+
+  .vision {
+  	@include centerer(false, true);
+
+  	border: solid 2px $red-blood;
+  	border-left: none;
+  	color: $red-blood;
+  	left: 0;
+  	margin-left: 10px;
+  	margin-top: -50px;
+  	max-width: 300px;
+  	padding: 40px 30px 40px 0;
+  	position: absolute;
+  	width: 80%;
+  }
+}
+
+.our-title {
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.our-paragraph {
+  font-family: $light;
+  font-size: 18px;
+}

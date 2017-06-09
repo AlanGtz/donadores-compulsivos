@@ -1,35 +1,44 @@
-.faq-title {
-  padding-top: 60px; 
-  text-align: center;
-}
-
-.index {
-  position: fixed;
-  width: 30%;
-}
-
-.link {
-  list-style: none;
-  padding: 6px;
-}
-
 .faq {
-  box-sizing: border-box;
-  margin-left: 30%;
-  padding: 0 50px 60px;
-  width: 70%;
+  background-color: $grey-bg;
+  position: relative;
 }
 
-.subject {
+.faq-title {
+  font-size: 50px;
+  font-weight: lighter;
+  line-height: 40px;
+  margin: 0 0 60px;
+  padding-top: 60px;
+  text-align: center;
   text-transform: uppercase;
 }
 
-.question {
-  font-size: 16px;
-  font-weight: bold;
-}
+.faq-wrapper {
+  @include make-sm-column(8);
+  @include make-sm-column-offset(2);
 
-.answer {
-  font-size: 14px;
-  line-height: 20px;
+  height: 65%;
+
+  .faq-index {
+    @include make-sm-column(3);
+
+    font-family: $light;
+    font-size: 18px;
+    list-style: none;
+    margin: 0;
+    text-align: right;
+
+    .faq-link {
+      margin-bottom: 10px;
+    }
+  }
+
+  .faq-miths {
+    @include make-sm-column(9);
+
+    color: $ashes;
+    font-family: $light;
+    height: 80%;
+    overflow-y: hidden;
+  }
 }

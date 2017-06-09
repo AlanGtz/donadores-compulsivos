@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'about_us', to: 'about_us#about_dc'
   get 'contact', to: 'contact#contact_us'
   get 'faq', to: 'frecuent_asked_questions#faq'
+  get 'sponsors', to: 'sponsors#sponsors'
   get 'support_us', to: 'support_us#support_us'
   get 'donate_money', to: 'donate_money#donate'
   get 'donate', to: 'donate_blood#donate'
