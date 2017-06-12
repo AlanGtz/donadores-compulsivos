@@ -1,0 +1,66 @@
+.sponsor-us-form {
+  background-color: $red-blood;
+}
+
+.sponsor-us-title {
+  color: $white;
+  font-size: 50px;
+  font-weight: lighter;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sponsor-us-wrapper {
+  @include make-sm-column(4);
+  @include make-sm-column-offset(1);
+
+  .sponsor-us-field {
+  	appearance: none;
+  	border: none;
+    border-radius: 5px;
+    font-family: $light;
+    height: 55px;
+    margin: 10px 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  select option:first-child {
+  	color: $cloud;
+  }
+
+  .sponsor-us-submit {
+  	background-color: transparent;
+    border: solid 1px $white;
+    border-radius: 5px;
+    color: $white;
+    cursor: pointer;
+    float: right;
+    font-family: $light;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    padding: 8px 40px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $white;
+      color: $red-blood;
+    }
+  }
+}
+
+.sponsor-us-slideshow {
+  @include make-sm-column(4);
+  @include make-sm-column-offset(1.5);
+
+  height: 300px;
+  margin-top: 3%;
+
+  img {
+  	cursor: pointer;
+  	display: hidden;
+  	height: 350px;
+  	width: 350px;
+  }
+}

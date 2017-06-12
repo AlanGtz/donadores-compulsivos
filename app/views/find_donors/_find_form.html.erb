@@ -1,30 +1,74 @@
-<%= form_tag('/find_form') do %>
+<h1 class="find-title">Busco donadores</h1>
 
-  <%= label_tag :for, 'Para', class: 'label' %>
-  <%= text_field_tag(:for) + tag(:br) %>
-  <%= label_tag :bloodtype, 'Tipo de sangre', class: 'label' %>
-  <%= select_tag(:bloodtype,
-  	options_for_select(
-  	  [
-  		['O+', 1], ['O-', 2],
-  		['A+', 3], ['A-', 4],
-  		['B+', 5], ['B-', 6],
-  		['AB+', 7], ['AB-', 8]
-  	  ],
-  	1)) + tag(:br) %>
-  <%= label_tag :city, 'Ciudad', class: 'label' %>
-  <%= text_field_tag(:city) + tag(:br) %>
-  <%= label_tag :phone, 'Telefono', class: 'label' %>
-  <%= telephone_field(:user, :phone) + tag(:br) %>
-  <%= label_tag :hospital, 'Hospital', class: 'label' %>
-  <%= text_field_tag(:hospital) + tag(:br) %>
-  <%= label_tag :address, 'Dirección', class: 'label' %>
-  <%= text_field_tag(:address) + tag(:br) %>
-  <%= label_tag :hours, 'Horario', class: 'label' %>
-  <%= text_field_tag(:hours) + tag(:br) %>
-  <%= label_tag :email, 'Email', class: 'label' %>
-  <%= email_field(:user, :email) + tag(:br) %>
+<%= form_tag('/find_form', {class: 'find-form'}) do %>
 
-  <%= submit_tag 'Buscar', class: 'submit flat-btn' %>
+  <div class="find-section">
+    <h3 class="find-subtitle">Datos del receptor</h3>
+    <div class="find-left">
+      <%= label_tag :for, '¿Quién recibirá la sangre?' %><br>
+      <%= text_field_tag 'for', nil, class: 'find-field' %>
+      <%= label_tag :bloodtype, 'Tipo de sangre' %><br>
+      <%= select_tag(:bloodtype,
+        options_for_select(
+          [
+            ['O+', 1], ['O-', 2],
+            ['A+', 3], ['A-', 4],
+            ['B+', 5], ['B-', 6],
+            ['AB+', 7], ['AB-', 8]
+          ],
+        1), class: 'find-field') %>
+      <%= label_tag :units, 'Unidades que necesita' %><br>
+      <%= text_field_tag 'units', nil, class: 'find-field' %>
+    </div>
+    <div class="find-right">
+      <%= label_tag :hospital, '¿En qué hospital se encuentra?' %><br>
+      <%= text_field_tag 'hospital', nil, class: 'find-field' %>
+      <%= label_tag :donationtype, 'Tipo de donación' %><br>
+      <%= select_tag(:donationtype,
+        options_for_select(
+          [
+            ['Sangre', 1],
+            ['Plaquetas', 2]
+          ],
+        1), class: 'find-field') %>
+      <%= label_tag :email, 'Email' %><br>
+      <%= email_field 'email', nil, class: 'find-field' %>
+    </div>
+  </div>
+  <div class="find-section">
+    <h3 class="find-subtitle">Dirección del hospital</h3>
+    <div class="find-left">
+      <%= label_tag :street, 'Calle' %><br>
+      <%= text_field_tag 'street', nil, class: 'find-field' %>
+      <%= label_tag :colony, 'Colonia' %><br>
+      <%= text_field_tag 'colony', nil, class: 'find-field' %>
+      <%= label_tag :state, 'Estado' %><br>
+      <%= select_tag(:state,
+        options_for_select(
+          [
+            ['Aguascalientes', 1], ['Baja California', 2],   ['Baja California Sur', 3],
+            ['Campeche', 4],       ['CDMX', 5],              ['Chiapas', 6],
+            ['Chihuahua', 7],      ['Coahuila', 8],          ['Colima', 9],
+            ['Durango', 10],       ['Estado de México', 11], ['Guanajuato', 12],
+            ['Guerrero', 13],      ['Hidalgo', 14],          ['Jalisco', 15],
+            ['Michoacán', 16],     ['Morelos', 17],          ['Nayarit', 18],
+            ['Nuevo León', 19],    ['Oaxaca', 20],           ['Puebla', 21],
+            ['Querétaro', 22],     ['Quintana Roo', 23],     ['San Luis Potosí', 24],
+            ['Sinaloa', 25],       ['Sonora', 26],           ['Tabasco', 27],
+            ['Tamaulipas', 28],    ['Tlaxcala', 29],         ['Veracruz', 30],
+            ['Yucatán', 31],       ['Zacatecas', 32]
+          ],
+        9), class: 'find-field') %>
+    </div>
+    <div class="find-right">
+      <%= label_tag :number, 'Número' %><br>
+      <%= text_field_tag 'number', nil, class: 'find-field' %>
+      <%= label_tag :zipcode, 'Código Postal' %><br>
+      <%= text_field_tag 'zipcode', nil, class: 'find-field' %>
+      <%= label_tag :city, 'Municipio' %><br>
+      <%= text_field_tag 'city', nil, class: 'find-field' %>
+    </div>
+    <%= submit_tag 'Enviar', class: 'find-submit' %>
+  </div>
 
 <% end %>

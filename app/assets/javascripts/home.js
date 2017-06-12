@@ -2,7 +2,7 @@ $(function() {
   $.scrollify({
   	section : 'section',
   	interstitialSection : '.inter',
-    standardScrollElements: '.standartScroll',
+    standardScrollElements: '.standartScroll'
   });
 });
 

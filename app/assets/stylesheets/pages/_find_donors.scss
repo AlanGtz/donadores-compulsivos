@@ -1,0 +1,100 @@
+.donate, .how-it-works {
+  background-color: $red-blood;
+}
+
+.donate {
+  overflow: auto;
+  width: 100%;
+}
+
+.find-title {
+  color: $white;
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 60px 0 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.find-form {
+  @include make-sm-column(7);
+  @include make-sm-column-offset(2.5);
+
+  background-color: $grey-bg;
+  border-radius: 20px;
+  font-family: $light;
+  font-size: 15px;
+  margin-bottom: 40px;
+  padding: 25px 15px;
+}
+
+.find-section {
+  @include make-sm-column(11);
+  @include make-sm-column-offset(0.5);
+
+  padding: 5px 15px 0;
+
+  .find-subtitle {
+  	font-family: $bold;
+  	font-weight: lighter;
+  	margin: 10px 0;
+  	padding: 0 15px;
+  	width: 100%;
+  }
+
+  .find-left {
+  	@include make-sm-column(6);
+  }
+
+  .find-right {
+  	@include make-sm-column(6);
+  }
+
+  .find-field {
+  	appearance: none;
+  	background-color: $white;
+  	border: solid 1px $cloud;
+    border-radius: 5px;
+    height: 33px;
+    margin: 10px 0;
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  .find-submit {
+  	background-color: transparent;
+    border: solid 2px $smoke;
+    border-radius: 5px;
+    color: $smoke;
+    cursor: pointer;
+    float: right;
+    font-family: $bold;
+    font-weight: lighter;
+    height: 32px;
+    margin: 20px 15px;
+    padding: 0 18px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $smoke;
+      color: $grey-bg;
+    }
+  }
+}
+
+.hiw-square {
+  @include make-sm-column(10);
+  @include make-sm-column-offset(1);
+
+  border: solid 2px $white;
+  height: 95%;
+  margin-top: 5%;
+
+  .hiw-title {
+    color: $white;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+  }
+}
