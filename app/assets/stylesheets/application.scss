@@ -25,6 +25,7 @@
 
 // 2. Vendors
 @import
+  'vendor/magnific_popup',
   'vendor/normalize';
 
 // 3. Base stuff
@@ -55,7 +56,11 @@
   'pages/about_DC/what_we_do',
   'pages/about_DC/our_values',
   'pages/about_DC/be_part',
+  'pages/donate_money/donate_money',
+  'pages/donate_money/donate_causes',
+  'pages/cartel',
   'pages/contact',
+  'pages/donate_blood',
   'pages/faq',
   'pages/find_donors',
   'pages/sponsors',

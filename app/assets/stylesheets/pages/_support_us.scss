@@ -1,36 +1,109 @@
-.video {
-  background-color: $cloud;
-  position: relative;
+.support-us {
+  background-color: $grey-bg;
+  overflow: auto;
+  width: 100%;
 }
 
 .support-title {
-  display: inline-block;
-  left: 10%;
-  position: absolute;
+  font-size: 50px;
+  font-weight: lighter;
+  line-height: 38px;
+  margin: 0;
+  padding: 60px 0 40px;
   text-align: center;
-  top: 50%;
-  transform: translate(-10%, -50%);
+  text-transform: uppercase;
 }
 
-.scared {
-  position: relative;
-}
+.support-wrapper {
+  @include make-sm-column(9.5);
+  @include make-sm-column-offset(1.25);
 
-.scared-title {
-  padding: 60px;
-  text-align: center;
-}
+  margin-bottom: 100px;
 
-.donate-btn {
-  bottom: 60px;
-  display: inline-block;
-  left: 50%;
-  line-height: 60px;
-  padding: 0 40px;
-  position: absolute;
-  transform: translateX(-50%);
-}
+  .support-space {
+    @include make-sm-column(6);
 
-.support-form {
-  display: inline-block;
+    border-radius: 20px;
+    padding: 13px;
+
+    .support-card {
+      border-radius: 20px;
+      color: $white;
+      font-size: 26px;
+      height: 100%;
+      padding-bottom: 52%;
+      text-align: center;
+      width: 100%;
+    }
+
+    .support-card--title {
+      @include centerer(true,true);
+
+      line-height: 20px;
+      margin-right: -5%;
+    }
+  }
+
+  .support-description {
+    background-color: transparent;
+    border-radius: 20px;
+    color: transparent;
+    font-family: $light;
+    font-size: 16px;
+    height: calc(100% - 26px);
+    padding: 20px;
+    position: absolute;
+    width: calc(100% - 26px);
+
+    &:hover {
+      background-color: $red-blood;
+      color: $white;
+      line-height: 25px;
+
+      .support-btn {
+        background-color: $white;
+        border: solid 2px $white;
+        border-radius: 5px;
+        color: $red-blood;
+
+        &:hover {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+    }
+
+    .support-paragraph {
+      margin: 0;
+    }
+
+    .support-btn {
+      @include centerer(true,false);
+
+      bottom: 12%;
+      color: transparent;
+      font-family: $bold;
+      font-weight: lighter;
+      line-height: 28px;
+      padding: 0 40px;
+      position: absolute;
+      text-transform: uppercase;
+    }
+  }
+
+  .support-card-1 {
+    background: url('support-card1.png') 0 0/100% no-repeat;
+  }
+
+  .support-card-2 {
+    background: url('support-card2.png') 0 0/100% no-repeat;
+  }
+
+  .support-card-3 {
+    background: url('support-card3.png') 0 0/100% no-repeat;
+  }
+
+  .support-card-4 {
+    background: url('support-card4.png') 0 0/100% no-repeat;
+  }
 }

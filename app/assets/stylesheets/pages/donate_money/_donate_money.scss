@@ -1,0 +1,142 @@
+.donate-options {
+  background-color: $red-blood;
+  overflow: auto;
+  width: 100%;
+}
+
+.money-title {
+  color: $white;
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 60px 0 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.money-wrapper {
+  @include make-sm-column(9);
+  @include make-sm-column-offset(1.5);
+
+  align-items: center;
+  background-color: $white;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: nowrap;
+  height: 300px;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
+  padding: 30px 0;
+
+  .money-amount {
+  	display: inline-block;
+  	float: left;
+  	padding: 19px 15px;
+  	width: 446px;
+
+  	.money-radio {
+  	  border: solid 2px $red-blood;
+  	  border-radius: 10px;
+  	  color: $red-blood;
+  	  display: inline-block;
+  	  font-size: 20px;
+  	  height: 77px;
+  	  line-height: 75px;
+  	  margin: 12px;
+  	  text-align: center;
+  	  width: 77px;
+  	}
+
+  	.money-radiobtn:checked + .money-radio {
+  	  color: $white;
+  	  background-color: $red-blood;
+  	}
+  }
+
+  .money-method {
+  	display: inline-block;
+  	padding: 19px 15px;
+  	width: 322px;
+
+  	.money-radio {
+  	  border: solid 2px $cloud;
+  	  border-radius: 10px;
+  	  color: $black;
+  	  display: inline-block;
+  	  font-size: 16px;
+  	  height: 77px;
+  	  line-height: 75px;
+  	  margin: 12px;
+  	  text-align: center;
+  	  width: 120px;
+
+  	  &:after {
+  	    color: $black;
+  	    font-family: $light;
+  	    font-size: 14px;
+  	    font-weight: bold;
+  	    left: -2px;
+  	    line-height: 16px;
+  	    position: absolute;
+  	    text-align: center;
+  	    width: 120px;
+  	  }
+  	}
+
+  	.money-radiobtn:checked + .money-radio {
+  	  color: $white;
+  	  background-color: $red-blood;
+  	  border: solid 2px $red-blood;
+  	}
+
+  	.money-radiobtn:checked + .money-radio:after {
+  	  color: $red-blood;
+  	}
+
+  	.money-radiobtn:checked + .creditcard {
+  	  background: $red-blood url('creditcard-selected.svg') center/54px 48px no-repeat;
+  	}
+  }
+
+  .money-line {
+  	background-color: $cloud;
+  	display: inline-block;
+  	height: 100%;
+  	margin: 20px;
+  	width: 2px;
+  }
+
+  .creditcard {
+  	background: url('creditcard.svg') center/54px 48px no-repeat;
+  	position: relative;
+
+  	&:after {
+  	  bottom: -40px;
+  	  content: 'Tarjeta de crédito';
+  	}
+  }
+
+  .paypal {
+  	background: url('paypal.svg') center/38px 45px no-repeat;
+  	position: relative;
+
+  	&:after {
+	  bottom: -24px;
+  	  content: 'PayPal';
+  	}
+  }
+
+  .money-radiobtn {
+  	display: none;
+  }
+
+  .money-submit {
+  	font-family: $bold;
+  	font-size: 22px;
+  	font-weight: lighter;
+  	line-height: 40px;
+  	margin: 45px 12px 12px;
+  	padding: 0 45px;
+  	text-transform: uppercase;
+  }
+}

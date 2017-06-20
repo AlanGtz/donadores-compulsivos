@@ -1,0 +1,29 @@
+<h1 class="money-title">Donaciones</h1>
+<%= form_tag('/donate_money', class: 'money-wrapper') do %>
+  <div class="money-amount">
+  	<%= radio_button_tag 'amount', 35, false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_35, '$35', class: 'money-radio' %>
+  	<%= radio_button_tag 'amount', 50, false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_50, '$50', class: 'money-radio' %>
+  	<%= radio_button_tag 'amount', 100, false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_100, '$100', class: 'money-radio' %>
+  	<%= radio_button_tag 'amount', 200, false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_200, '$200', class: 'money-radio' %>
+  	<%= radio_button_tag 'amount', 500, false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_500, '$500', class: 'money-radio' %>
+  	<%= radio_button_tag 'amount', 750, false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_750, '$750', class: 'money-radio' %>
+  	<%= radio_button_tag 'amount', 1000, false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_1000, '$1000', class: 'money-radio' %>
+  	<%= radio_button_tag 'amount', 'otra', false, class: 'money-radiobtn' %>
+  	<%= label_tag :amount_otra, 'Otra', class: 'money-radio' %>
+  </div>
+  <div class="money-line"></div>
+  <div class="money-method">
+  	<%= radio_button_tag 'method', 'credit', false, class: 'money-radiobtn' %>
+  	<%= label_tag :method_credit, '', class: 'money-radio creditcard' %>
+  	<%= radio_button_tag 'method', 'paypal', false, class: 'money-radiobtn' %>
+  	<%= label_tag :method_paypal, '', class: 'money-radio paypal' %>
+  	<%= submit_tag 'Hacer donación', class: 'money-submit flat-btn' %>
+  </div>
+<% end %>

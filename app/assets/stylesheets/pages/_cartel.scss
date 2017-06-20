@@ -1,0 +1,118 @@
+.cartel {
+  background-color: $red-blood;
+  border-radius: 20px;
+  height: 700px;
+  margin: 20px;
+  width: 600px;
+
+  .cartel-state {
+    color: $white;
+    font-size: 27px;
+    font-family: $light;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .cartel-title {
+  	font-size: 48px;
+  	font-weight: lighter;
+  	line-height: 30px;
+  	margin: 0;
+  	text-align: center;
+  	text-transform: uppercase;
+  }
+
+  .cartel-type {
+  	font-size: 37px;
+  	line-height: 30px;
+  	margin: 0;
+  	text-align: center;
+  	text-transform: lowercase;
+  }
+
+  .cartel-units {
+  	font-family: $light;
+  	font-size: 18px;
+  	text-align: center;
+
+  	.cartel-bold {
+  	  font-size: 24px;
+  	}
+  }
+
+  .cartel-division {
+  	background-color: $black;
+  	height: 1px;
+  	margin: 30px 30px 15px;
+  	width: 90%;
+  }
+
+  .cartel-name {
+  	font-family: $light;
+  	font-size: 17px;
+  	font-weight: 600;
+  	margin: 18px 0 10px;
+  	padding-left: 125px;
+
+  	span {
+  	  color: $white;
+  	  font-size: 28px;
+  	  font-weight: bold;
+  	}
+  }
+
+  .cartel-place {
+  	font-family: $light;
+  	font-size: 17px;
+  	font-weight: 600;
+  	margin: 5px 0 5px;
+  	padding-left: 30px;
+
+  	span {
+  	  color: $white;
+  	  font-size: 19px;
+  	  font-weight: bold;
+  	}
+  }
+
+  .cartel-address {
+  	color: $white;
+  	font-family: $light;
+  	font-size: 17px;
+  	line-height: 22px;
+  	margin: 0;
+  	padding-left: 182px;
+  }
+
+  .cartel-days {
+  	font-family: $light;
+  	font-size: 17px;
+  	font-weight: 600;
+  	line-height: 22px;
+  	margin: 10px 0 0;
+  	padding-left: 81px;
+
+  	span {
+  	  color: $white;
+  	  font-family: $light;
+  	  font-size: 17px;
+  	}
+  }
+
+  .cartel-time {
+  	color: $white;
+  	font-family: $light;
+  	font-size: 16px;
+  	line-height: 22px;
+  	margin: 0;
+  	padding-left: 182px;
+  }
+
+  .cartel-bold {
+  	font-family: $bold;
+  	font-weight: lighter;
+  }
+}

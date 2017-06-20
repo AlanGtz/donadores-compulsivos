@@ -1,0 +1,146 @@
+.donate, .what-happens {
+  background-color: $grey-bg;
+  overflow: auto;
+  width: 100%;
+}
+
+.donate-title {
+  color: $red-blood;
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 60px 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.donate-description {
+  @include make-sm-column(5);
+  @include make-sm-column-offset(3.5);
+
+  font-family: $light;
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.donate-wrapper {
+  @include make-sm-column(11);
+  @include make-sm-column-offset(0.5);
+
+  margin-bottom: 15px;
+  margin-top: 30px;
+
+  .donate-item {
+  	@include make-sm-column(4);
+
+  	.donate-container {
+  	  background-color: $red-blood;
+  	  border-radius: 10px;
+  	  height: 100px;
+  	  margin: 15px 0;
+  	}
+
+  	.donate-question {
+  	  color: $white;
+  	  font-family: $light;
+  	  font-size: 14px;
+  	  font-weight: bold;
+  	  line-height: 16px;
+  	  padding: 15px 10px 0;
+  	  text-align: center;
+  	}
+
+  	.donate-answers {
+  	  @include centerer(true,false);
+
+  	  bottom: 30px;
+  	  width: 188px;
+  	}
+  }
+}
+
+.donate-radiobtn {
+  display: none;
+}
+
+.donate-radio {
+  border: solid 1px $white;
+  border-radius: 5px;
+  color: $white;
+  display: inline-block;
+  font-family: $light;
+  margin: 0 4px;
+  padding: 4px;
+  text-align: center;
+  width: 84px;
+
+  &:hover {
+  	background: $white;
+  	color: $red-blood;
+  	cursor: pointer;
+  }
+}
+
+.donate-radiobtn:checked + .donate-radio {
+  background-color: $red-blood;
+  border: solid 1px $red-blood;
+
+  &:hover {
+  	background-color: $white;
+  }
+}
+
+.donate-row {
+  display: inline-block;
+  margin: 15px 0 60px;
+  position: relative;
+  width: 100%;
+
+  .donate-submit {
+  	@include centerer(true,false);
+
+    border: solid 2px $red-blood;
+    border-radius: 5px;
+    font-family: $bold;
+    font-size: 17px;
+    line-height: 32px;
+    padding: 0 10px;
+    text-transform: uppercase;
+  }
+
+  .donate-inactive {
+    background: transparent;
+    border-color: $cloud;
+    color: $cloud;
+    font-family: $bold;
+    font-size: 17px;
+  }
+
+  .donate-active {
+    background: $red-blood;
+    border-color: $red-blood;
+    color: $white;
+
+    &:hover {
+  	  background: transparent;
+  	  color: $red-blood;
+  	  cursor: pointer;
+    }
+  }
+}
+
+.whwb-square {
+  @include make-sm-column(10);
+  @include make-sm-column-offset(1);
+
+  border: solid 2px $red-blood;
+  height: 95%;
+  margin-top: 5%;
+
+  .whwb-title {
+    color: $red-blood;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+  }
+}

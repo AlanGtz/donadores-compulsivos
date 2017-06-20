@@ -1,0 +1,40 @@
+<div class="inter">
+  <%= render 'layouts/header' %>
+</div>
+
+<div class="cartel">
+  <h2 class="cartel-state">¡Atención <%= @receiver.state %>!</h2>
+  <h1 class="cartel-title">Se buscan donadores</h1>
+  <p class="cartel-type">de <%= @receiver.donationtype %></p>
+  <p class="cartel-units">se necesitan <span class="cartel-bold"><%= @receiver.units %></span> unidades</p>
+  <div class="cartel-division"></div>
+  <p class="cartel-name">Para: &nbsp;<span><%= @receiver.name %></span></p>
+  <p class="cartel-place">Presentarse en: &nbsp;<span><%= @receiver.hospital %></span></p>
+  <p class="cartel-address"><%= @receiver.street %> No. <%= @receiver.number %></p>
+  <p class="cartel-address">Col. <%= @receiver.colony %> C.P. <%= @receiver.zipcode %></p>
+  <p class="cartel-address"><%= @receiver.city %>, <%= @receiver.state %></p>
+  <p class="cartel-days">¿Cuándo? &nbsp;<span>Martes a Viernes</span></p>
+  <p class="cartel-time">7:00 a.m. a 12:00 p.m. / 4:00 p.m. a 8:00 p.m.</p>
+  <p>Contacto:</p>
+  <div>
+  	<p><%= @receiver.contact %></p>
+  	<p><%= @receiver.phone %></p>
+  </div>
+  <div>
+  	<p><%= @receiver.contact2 %></p>
+  	<p><%= @receiver.phone2 %></p>
+  </div>
+</div>
+
+<p>
+  <%= @receiver.bloodtype %>
+  <%= @receiver.timestart %>
+  <%= @receiver.timeend %>
+  <%= @receiver.timestart2 %>
+  <%= @receiver.timeend2 %>
+  <%= @receiver.days %>
+</p>
+
+<div class="inter">
+  <%= render 'layouts/footer' %>
+</div>

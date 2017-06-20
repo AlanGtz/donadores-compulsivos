@@ -7,10 +7,17 @@ $(function() {
 });
 
 $(document).ready(function() {
+  playVideo();
   changeCampaign();
   numberScroll();
   activeTestimony();
 });
+
+function playVideo() {
+  $('.play-btn').magnificPopup({
+    type: 'iframe'
+  });
+}
 
 function changeCampaign() {
   $('.campaign-month').slick({

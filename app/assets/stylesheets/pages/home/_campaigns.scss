@@ -1,3 +1,15 @@
+.campaigns {
+  position: relative;
+
+  .campaign-wave {
+    background: url('white-wave.svg') 0/cover no-repeat;
+    height: 60px;
+    position: absolute;
+    top: -22px;
+    width: 100%;
+  }
+}
+
 .campaign-container {
   @include make-sm-column(9);
 
@@ -51,8 +63,17 @@
   	.campaign-description {
   	  font-family: $light;
   	  font-size: 16px;
+      margin: 16px 0 0; 
   	  padding: 10px 50px;
   	}
+
+    .campaign-show {
+      color: $red-blood;
+      float: right;
+      margin: 0;
+      padding-right: 50px;
+      text-transform: uppercase;
+    }
   }
 
   [class*="campaign-side-"] {
@@ -107,7 +128,7 @@
 
   font-size: 18px;
   margin-top: 40px;
-  padding: 10px 40px;
+  padding: 10px 20px;
   text-align: center;
   text-transform: uppercase;
   top: 75%;

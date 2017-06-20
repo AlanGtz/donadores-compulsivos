@@ -1,8 +1,8 @@
-.donate, .how-it-works {
+.find-donors, .how-it-works {
   background-color: $red-blood;
 }
 
-.donate {
+.find-donors {
   overflow: auto;
   width: 100%;
 }
@@ -33,6 +33,7 @@
   @include make-sm-column(11);
   @include make-sm-column-offset(0.5);
 
+  min-height: 70px;
   padding: 5px 15px 0;
 
   .find-subtitle {
@@ -43,12 +44,10 @@
   	width: 100%;
   }
 
-  .find-left {
-  	@include make-sm-column(6);
-  }
+  .find-row {
+    @include make-sm-column(6);
 
-  .find-right {
-  	@include make-sm-column(6);
+    min-height: 70px;
   }
 
   .find-field {
@@ -58,29 +57,67 @@
     border-radius: 5px;
     height: 33px;
     margin: 10px 0;
-    padding: 0 15px;
+    padding: 6px 15px;
     width: 100%;
   }
 
-  .find-submit {
-  	background-color: transparent;
-    border: solid 2px $smoke;
+  .find-time {
+    width: 46%
+  }
+
+  span {
+    display: inline-block;
+    margin: -5px;
+    padding: 0;
+    text-align: center;
+    width: 8%;
+  }
+
+  .find-checkbox {
+    display: none;
+  }
+
+  .find-checkbox + .find-check {
+    background-color: $white;
+    border: solid 1px $cloud;
     border-radius: 5px;
     color: $smoke;
-    cursor: pointer;
-    float: right;
-    font-family: $bold;
-    font-weight: lighter;
-    height: 32px;
-    margin: 20px 15px;
-    padding: 0 18px;
-    text-transform: uppercase;
+    font-size: 11px;
+    height: 33px;
+    line-height: 31px;
+    margin: 10px 0;
+    padding-right: 1px;
+    text-align: center;
+    width: 33px;
+  }
 
-    &:hover {
-      background-color: $smoke;
-      color: $grey-bg;
+  .find-checkbox:checked + .find-check {
+    background-color: $grass;
+    border: solid 1px $grass;
+    color: $white;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+
+    label:first-child {
+      display: inline-flex;
     }
   }
+}
+
+.find-submit {
+  @include centerer(true, false);
+
+  border: none;
+  font-family: $bold;
+  font-weight: lighter;
+  height: 32px;
+  margin: 20px 0;
+  padding: 0 50px;
+  text-transform: uppercase;
 }
 
 .hiw-square {
