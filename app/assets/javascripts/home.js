@@ -11,6 +11,7 @@ $(document).ready(function() {
   changeCampaign();
   numberScroll();
   activeTestimony();
+  setFlashMessageTimeOut();
 });
 
 function playVideo() {
@@ -86,5 +87,9 @@ function activeTestimony() {
     $(this).siblings('.testimony-js').removeClass('active-card');
     $(this).addClass('active-card');
   });
+}
+
+function setFlashMessageTimeOut() {
+  setTimeout(function(){ $('.alert').slideUp('fast')}, 5000);
 }
 

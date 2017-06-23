@@ -2,16 +2,16 @@
 <p class="donate-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
 
-<%= form_tag('/donate_blood', class: 'donate-wrapper') do %>
+<%= form_for :donor, url: donors_path, html: {class: 'donate-wrapper'} do |f| %>
 
   <div class="donate-item">
   	<div class="donate-container">
   	  <p class="donate-question">¿Tienes entre 18 y 65 años de edad?</p>
   	  <div class="donate-answers">
-  	    <%= radio_button_tag 'age', 'yes', false, class: 'donate-radiobtn' %>
-  	    <%= label_tag :age_yes, 'Sí', class: 'donate-radio' %>
-  	    <%= radio_button_tag 'age', 'no', false, class: 'donate-radiobtn' %>
-  	    <%= label_tag :age_no, 'No', class: 'donate-radio' %>
+  	    <%= f.radio_button 'age', 'yes', false, class: 'donate-radiobtn' %>
+  	    <%= f.label :age_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button 'age', 'no', false, class: 'donate-radiobtn' %>
+  	    <%= f.label :age_no, 'No', class: 'donate-radio' %>
   	  </div>
   	</div>
   </div>

@@ -2,13 +2,19 @@
   <div class="footer-wave"></div>
   <div class="footer-social">
     <div class="footer-item">
-      <%= link_to image_tag('facebook.png'), 'facebook.com', class: 'footer-facebook footer-snlink circle' %>
+      <a href="https://www.facebook.com/DonadoresCompulsivos/" class="footer-facebook footer-snlink circle">
+        <div class="facebook-icon"></div>
+      </a>
     </div>
     <div class="footer-item">
-      <%= link_to image_tag('instagram.png'), 'instagram.com', class: 'footer-instagram footer-snlink circle' %>
+      <a href="instagram.com" class="footer-instagram footer-snlink circle">
+        <div class="instagram-icon"></div>
+      </a>
     </div>
     <div class="footer-item">
-      <%= link_to image_tag('twitter.png'), 'twitter.com', class: 'footer-twitter footer-snlink circle' %>
+      <a href="https://twitter.com/search?q=donadores%20compulsivos&src=typd&lang=es" class="footer-twitter footer-snlink circle">
+        <div class="twitter-icon"></div>
+      </a>
     </div>
   </div>	
   <div class="footer-column">
@@ -17,7 +23,6 @@
   	  <p class="footer-paragraph">Calle Juárez No. 386</p>
   	  <p class="footer-paragraph">Col. Centro, C.P. 28000</p>
   	  <p class="footer-paragraph">Colima, Col.</p>
-  	  <p class="footer-paragraph">(52) 312 312 1842</p>
       <p class="footer-paragraph">info@donadorescompulsivos.org</p>
   	</div>
   </div>
@@ -33,7 +38,7 @@
   	  <p class="footer-paragraph"><%= link_to 'Inicio', home_path %></p>
   	  <p class="footer-paragraph"><%= link_to 'Sobre DC', about_us_path %></p>
   	  <p class="footer-paragraph"><%= link_to 'Blog', root_path %></p>
-  	  <p class="footer-paragraph"><%= link_to 'Contacto', contact_path %></p>
+  	  <p class="footer-paragraph"><%= link_to 'Contacto', new_contact_path %></p>
   	  <p class="footer-paragraph"><%= link_to 'FAQ', faq_path %></p>
   	</div>
   </div>

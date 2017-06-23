@@ -5,11 +5,11 @@ class CreateReceivers < ActiveRecord::Migration
       t.string :bloodtype
       t.string :donationtype
       t.integer :units
-      t.integer :timestart
-      t.integer :timeend
-      t.integer :timestart2
-      t.integer :timeend2
-      t.string :days
+      t.string :timestart
+      t.string :timeend
+      t.string :timestart2
+      t.string :timeend2
+      t.string :days, array: true, default: []
       t.string :hospital
       t.string :street
       t.string :number

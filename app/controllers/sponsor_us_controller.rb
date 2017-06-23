@@ -1,4 +1,4 @@
 class SponsorUsController < ApplicationController
-  def sponsor_form
+  def sponsor_us
   end
 end

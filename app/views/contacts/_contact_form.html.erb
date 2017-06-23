@@ -1,0 +1,21 @@
+<h1 class="contact-title">Contáctanos</h1>
+<div class="contact-wrapper">
+  <%= form_for :contact, url: contacts_path do |f| %>
+  	<div class="contact-left">
+  	  <%= f.text_field :name, class: 'contact-field', placeholder: 'Nombre' %>
+      <%= f.select(:subject,
+        options_for_select(
+          [
+            ['Contacto'],['Donación de material'],['Donación de alimentos'],
+            ['Donadores trabajando'],['Donadores estudiando'],['Replica en tu ciudad']
+          ],
+        ), {}, class: 'contact-field') %>
+  	  <%= f.telephone_field :phone, class: 'contact-field', placeholder: 'Teléfono' %>
+  	  <%= f.email_field :email, class: 'contact-field', placeholder: 'e-mail' %>
+  	</div>
+  	<div class="contact-right">
+  	  <%= f.text_area :message, class: 'contact-field', placeholder: 'Mensaje' %>
+  	</div>
+  	<%= f.submit 'Enviar', class: 'contact-submit' %>
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+.alert {
+  font-size: 20px;
+  height: 60px;
+  left: 0;
+  line-height: 60px;
+  position: fixed;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  z-index: 9999999;
+}
+
+.alert-success {
+  background-color: $grass;
+  color: $white;
+}

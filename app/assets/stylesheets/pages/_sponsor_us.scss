@@ -11,17 +11,17 @@
 }
 
 .sponsor-us-wrapper {
-  @include make-sm-column(4);
-  @include make-sm-column-offset(1);
+  @include make-sm-column(3);
+  @include make-sm-column-offset(2);
 
   .sponsor-us-field {
   	appearance: none;
   	border: none;
     border-radius: 5px;
     font-family: $light;
-    height: 55px;
+    height: 33px;
     margin: 10px 0;
-    padding: 20px;
+    padding: 0 20px;
     width: 100%;
   }
 

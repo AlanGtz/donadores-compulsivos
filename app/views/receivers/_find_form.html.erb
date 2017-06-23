@@ -35,16 +35,20 @@
       <%= f.text_field :units, class: 'find-field' %>
     </div>
     <div class="find-row">
+      <% hours = ['12:00 a.m.', '1:00 a.m.', '2:00 a.m.', '3:00 a.m.', '4:00 a.m.', '5:00 a.m.',
+                  '6:00 a.m.', '7:00 a.m.', '8:00 a.m.', '9:00 a.m.', '10:00 a.m.', '11:00 a.m.',
+                  '12:00 p.m.', '1:00 p.m.', '2:00 p.m.', '3:00 p.m.', '4:00 p.m.', '5:00 p.m.',
+                  '6:00 p.m.', '7:00 p.m.', '8:00 p.m.', '9:00 p.m.', '10:00 p.m.', '11:00 p.m.'] %>
       <%= f.label :timestart, 'Horario a presentarse' %><br>
-      <%= f.time_select :timestart, {discard_minute: true, ampm: true, ignore_date: true}, class: 'find-field find-time' %>
+      <%= f.select(:timestart, options_for_select(hours), {}, class: 'find-field find-time') %>
       <span>a</span>
-      <%= f.time_select :timeend, {discard_minute: true, ampm: true, ignore_date: true}, class: 'find-field find-time' %>
+      <%= f.select(:timeend, options_for_select(hours), {}, class: 'find-field find-time') %>
     </div>
     <div class="find-row">
       <%= f.label :timestart2, 'Segundo horario (opcional)' %><br>
-      <%= f.time_select :timestart2, {discard_minute: true, ampm: true, ignore_date: true}, class: 'find-field find-time' %>
+      <%= f.select(:timestart2, options_for_select(hours), {}, class: 'find-field find-time') %>
       <span>a</span>
-      <%= f.time_select :timeend2, {discard_minute: true, ampm: true, ignore_date: true}, class: 'find-field find-time' %>
+      <%= f.select(:timeend2, options_for_select(hours), {}, class: 'find-field find-time') %>
     </div>
     <div class="find-row">
       <%= f.label :days, 'Días en que puede presentarse' %><br>

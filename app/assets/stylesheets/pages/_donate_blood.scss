@@ -133,14 +133,57 @@
   @include make-sm-column(10);
   @include make-sm-column-offset(1);
 
-  border: solid 2px $red-blood;
-  height: 95%;
-  margin-top: 5%;
+  background-color: $white;
+  border-radius: 20px;
+  font-family: $medium;
+  height: 287px;
+  margin: 40px 0 160px;
 
   .whwb-title {
-    color: $red-blood;
-    font-size: 50px;
+    font-size: 35px;
     font-weight: lighter;
+    margin-top: 40px;
     text-align: center;
+  }
+
+  div:first-of-type {
+    @include make-sm-column-offset(0.5);
+  }
+
+  .whwb-item {
+    @include make-sm-column(2);
+
+    font-size: 20px;
+    padding: 0;
+    text-align: center;
+
+    .whwb-icon {
+      height: 70px;
+      margin: 5px auto;
+      width: 70px;
+    }
+  }
+
+  .whwb-arrow {
+    @include make-sm-column(1);
+
+    background: url('whwb-arrow.svg') center center no-repeat;
+    height: 80px;
+  }
+
+  .whwb-icon-1 {
+    background: url('whwb-icon1.svg') center center no-repeat;
+  }
+
+  .whwb-icon-2 {
+    background: url('whwb-icon2.svg') center center no-repeat;
+  }
+
+  .whwb-icon-3 {
+    background: url('whwb-icon3.svg') center center no-repeat;
+  }
+
+  .whwb-icon-4 {
+    background: url('whwb-icon4.svg') center center no-repeat;
   }
 }

@@ -11,21 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620183115) do
+ActiveRecord::Schema.define(version: 20170623145048) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "subject"
+    t.string   "phone"
+    t.string   "email"
+    t.text     "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "receivers", force: :cascade do |t|
     t.string   "name"
     t.string   "bloodtype"
     t.string   "donationtype"
     t.integer  "units"
-    t.integer  "timestart"
-    t.integer  "timeend"
-    t.integer  "timestart2"
-    t.integer  "timeend2"
-    t.string   "days"
+    t.string   "timestart"
+    t.string   "timeend"
+    t.string   "timestart2"
+    t.string   "timeend2"
+    t.string   "days",         default: [],              array: true
     t.string   "hospital"
     t.string   "street"
     t.string   "number"
@@ -37,6 +47,17 @@ ActiveRecord::Schema.define(version: 20170620183115) do
     t.string   "phone"
     t.string   "contact2"
     t.string   "phone2"
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  create_table "sponsors", force: :cascade do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.string   "state"
+    t.string   "city"
+    t.string   "organization"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

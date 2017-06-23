@@ -1,0 +1,27 @@
+<h1 class="sponsor-us-title">Ayúdanos a salvar más vidas</h1>
+<div class="sponsor-us-wrapper">
+  <%= form_for :sponsor, url: sponsors_path do |f| %>
+  	<%= f.text_field :name, class: 'sponsor-us-field', placeholder: 'Nombre' %>
+  	<%= f.text_field :phone, class: 'sponsor-us-field', placeholder: 'Teléfono' %>
+  	<%= f.text_field :email, class: 'sponsor-us-field', placeholder: 'e-mail' %>
+  	<%= f.select(:state,
+        options_for_select(
+          [
+            ['Aguascalientes'], ['Baja California'],  ['Baja California Sur'],
+            ['Campeche'],       ['CDMX'],             ['Chiapas'],
+            ['Chihuahua'],      ['Coahuila'],         ['Colima'],
+            ['Durango'],        ['Estado de México'], ['Guanajuato'],
+            ['Guerrero'],       ['Hidalgo'],          ['Jalisco'],
+            ['Michoacán'],      ['Morelos'],          ['Nayarit'],
+            ['Nuevo León'],     ['Oaxaca'],           ['Puebla'],
+            ['Querétaro'],      ['Quintana Roo'],     ['San Luis Potosí'],
+            ['Sinaloa'],        ['Sonora'],           ['Tabasco'],
+            ['Tamaulipas'],     ['Tlaxcala'],         ['Veracruz'],
+            ['Yucatán'],        ['Zacatecas']
+          ],
+        ), {}, class: 'sponsor-us-field') %>
+    <%= f.text_field :city, class: 'sponsor-us-field', placeholder: 'Ciudad' %>
+    <%= f.text_field :organization, class: 'sponsor-us-field', placeholder: 'Organización' %>
+  	<%= f.submit 'Enviar', class: 'sponsor-us-submit' %>
+  <% end %>
+</div>
