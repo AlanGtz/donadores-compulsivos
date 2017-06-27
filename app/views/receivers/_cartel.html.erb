@@ -5,7 +5,9 @@
   <div class="cartel-bloodtypes">
   	<p class="cartel-info">Puedes donar si tu tipo de sangre es</p>
   	<div class="cartel-blood">
-  	  <div class="cartel-item"><%= @receiver.bloodtype %></div>
+      <% @bloodtypes.each do |b| %>
+  	  <div class="cartel-item"><%= b %></div>
+      <% end %>
   	</div>
   </div>
   <p class="cartel-units">se necesitan <span class="cartel-bold"><%= @receiver.units %></span> unidades</p>
@@ -29,4 +31,10 @@
   	<p class="cartel-phone"><%= @receiver.phone2 %></p>
   </div>
   <div class="cartel-footer"></div>
+</div>
+
+<div class="download-wrapper">
+  <h3 class="download-title">¡Su solicitud está lista!</h3>
+  <p class="download-text">Descargue su solicitud para que pueda compartirla en sus redes sociales con todos sus contactos.</p>
+  <div class="download-btn">Descargar imagen</div>
 </div>

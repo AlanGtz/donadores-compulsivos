@@ -7,8 +7,10 @@
 .cartel {
   background-color: $red-blood;
   border-radius: 20px;
+  display: inline-block;
+  float: left;
   height: 700px;
-  margin: 60px 80px 100px;
+  margin: 60px 0 100px 80px;
   position: relative;
   width: 600px;
 
@@ -200,5 +202,41 @@
   .cartel-bold {
   	font-family: $bold;
   	font-weight: lighter;
+  }
+}
+
+.download-wrapper {
+  @include make-sm-column(3.5);
+
+  color: $nimbus;
+  font-family: $medium;
+  font-weight: lighter;
+  margin: 0 60px;
+
+  .download-title {
+    font-size: 50px;
+    font-weight: lighter;
+    line-height: 45px;
+    margin: 100px 0 20px;
+  }
+
+  .download-text {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .download-btn {
+    background-color: $black;
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 35px 10px 37px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $red-blood;
+    }
   }
 }

@@ -5,9 +5,12 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
  
-    @contact.save
-    redirect_to new_contact_path
-    flash[:success] = 'Gracias por escribir a Donadores Compulsivos, te contactaremos pronto.'
+    if @contact.save
+      redirect_to new_contact_path
+      flash[:success] = 'Gracias por escribir a Donadores Compulsivos, te contactaremos pronto.'
+    else
+      redirect_to new_contact_path
+    end
   end
 
   private

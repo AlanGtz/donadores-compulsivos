@@ -12,8 +12,7 @@ Rails.application.routes.draw do
   get 'sponsor_us', to: 'sponsor_us#sponsors'
   get 'support_us', to: 'support_us#support_us'
   get 'donate_money', to: 'donate_money#donate'
-  get 'donate', to: 'donors#new'
-  get 'results', to: 'donate_results#donate_results'
+  get 'donate', to: 'donors#donors'
   get 'find_donors', to: 'receivers#new'
 
   root 'home#index'

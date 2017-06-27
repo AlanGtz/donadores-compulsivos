@@ -1,6 +1,27 @@
 class ReceiversController < ApplicationController
   def show
     @receiver = Receiver.find(params[:id])
+
+    @bloodtype = @receiver.bloodtype
+
+    case @bloodtype
+      when 'O+'
+        @bloodtypes = ['O+','O-']
+      when 'O-'
+        @bloodtypes = ['O-']
+      when 'A+'
+        @bloodtypes = ['A+','A-','O+','O-']
+      when 'A-'
+        @bloodtypes = ['A-','O-']
+      when 'B+'
+        @bloodtypes = ['B+','B-','O+','O-']
+      when 'B-'
+        @bloodtypes = ['B-','O-']
+      when 'AB+'
+        @bloodtypes = ['AB+','AB-','A+','A-','B+','B-','O+','O-']
+      when 'AB-'
+        @bloodtypes = ['AB-','A-','B-','O-']
+    end
   end
 
   def new
@@ -24,26 +45,5 @@ class ReceiversController < ApplicationController
         :units,:timestart,:timeend,:timestart2,:timeend2,:hospital,
         :street,:number,:colony,:zipcode,:state,:city,:contact,:phone,
         :contact2,:phone2,:days => [])
-    end
-
-    def compatible
-      case @bloodtypes
-        when 1
-          @bloodtypes = ['O+','O-']
-        when 2
-          @bloodtypes = ['O-']
-        when 3
-          @bloodtypes = ['A+','A-','O+','O-']
-        when 4
-          @bloodtypes = ['A-','O-']
-        when 5
-          @bloodtypes = ['B+','B-','O+','O-']
-        when 6
-          @bloodtypes = ['B-','O-']
-        when 7
-          @bloodtypes = ['AB+','AB-','A+','A-','B+','B-','O+','O-']
-        when 8
-          @bloodtypes = ['AB-','A-','B-','O-']
-      end
     end
 end

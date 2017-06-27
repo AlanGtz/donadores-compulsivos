@@ -12,9 +12,19 @@
   font-size: 50px;
   font-weight: lighter;
   margin: 0;
-  padding: 60px 0 40px;
+  padding: 60px 0 10px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.find-description {
+  @include make-sm-column(5);
+  @include make-sm-column-offset(3.5);
+
+  color: $white;
+  font-family: $light;
+  margin: 20px;
+  text-align: center;
 }
 
 .find-form {
@@ -25,7 +35,7 @@
   border-radius: 20px;
   font-family: $light;
   font-size: 15px;
-  margin-bottom: 40px;
+  margin: 20px 0 160px;
   padding: 25px 15px;
 }
 

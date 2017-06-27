@@ -38,7 +38,6 @@
     }
 
     .contact-field {
-      appearance: none;
       border: none;
       border-radius: 5px;
       font-family: $light;
@@ -46,6 +45,11 @@
       margin: 12.5px 0;
       padding: 0 20px;
       width: 100%;
+    }
+
+    .contact-select {
+      appearance: none;
+      background: $white url('triangle.svg') 96% center no-repeat;
     }
 
     .contact-submit {

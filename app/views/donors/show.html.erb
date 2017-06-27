@@ -1,0 +1,17 @@
+<div class="inter">
+  <%= render 'layouts/header' %>
+</div>
+
+<% if @donor.result == 'able' %>
+  <section class="donors-able">
+    <%= render 'donors/able' %>
+  </section>
+<% else %>
+  <section class="donors-unable">
+    <%= render 'donors/unable' %>
+  </section>
+<% end %>
+
+<div class="inter">
+  <%= render 'layouts/footer' %>
+</div>
