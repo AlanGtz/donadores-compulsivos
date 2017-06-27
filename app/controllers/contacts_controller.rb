@@ -9,7 +9,8 @@ class ContactsController < ApplicationController
       redirect_to new_contact_path
       flash[:success] = 'Gracias por escribir a Donadores Compulsivos, te contactaremos pronto.'
     else
-      redirect_to new_contact_path
+      flash.now[:error] = 'Por favor, revisa que todos los campos sean llenados correctamente.'
+      render 'contacts/new'
     end
   end
 

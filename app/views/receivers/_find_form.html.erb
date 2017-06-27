@@ -6,11 +6,11 @@
   <div class="find-section">
     <h3 class="find-subtitle">Datos del receptor</h3>
     <div class="find-row">
-      <%= f.label :name, '¿Quién recibirá la sangre?' %><br>
+      <%= f.label :name, '¿Quién recibirá la sangre?' %>
       <%= f.text_field :name, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :bloodtype, 'Tipo de sangre' %><br>
+      <%= f.label :bloodtype, 'Tipo de sangre' %>
       <%= f.select(:bloodtype,
         options_for_select(
           [
@@ -19,20 +19,21 @@
             ['B+'], ['B-'],
             ['AB+'], ['AB-']
           ],
-        ), {}, class: 'find-field') %>
+        ), {}, class: 'find-field find-select') %>
     </div>
     <div class="find-row">
-      <%= f.label :donationtype, 'Tipo de donación' %><br>
+      <%= f.label :donationtype, 'Tipo de donación' %>
       <%= f.select(:donationtype,
         options_for_select(
           [
             ['Sangre'],
-            ['Plaquetas']
+            ['Plaquetas'],
+            ['Sangre y plaquetas']
           ],
-        ), {}, class: 'find-field') %>
+        ), {}, class: 'find-field find-select') %>
     </div>
     <div class="find-row">
-      <%= f.label :units, 'Unidades que necesita' %><br>
+      <%= f.label :units, 'Unidades que necesita' %>
       <%= f.text_field :units, class: 'find-field' %>
     </div>
     <div class="find-row">
@@ -40,19 +41,19 @@
                   '6:00 a.m.', '7:00 a.m.', '8:00 a.m.', '9:00 a.m.', '10:00 a.m.', '11:00 a.m.',
                   '12:00 p.m.', '1:00 p.m.', '2:00 p.m.', '3:00 p.m.', '4:00 p.m.', '5:00 p.m.',
                   '6:00 p.m.', '7:00 p.m.', '8:00 p.m.', '9:00 p.m.', '10:00 p.m.', '11:00 p.m.'] %>
-      <%= f.label :timestart, 'Horario a presentarse' %><br>
-      <%= f.select(:timestart, options_for_select(hours), {}, class: 'find-field find-time') %>
+      <%= f.label :timestart, 'Horario a presentarse' %>
+      <%= f.select(:timestart, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
       <span>a</span>
-      <%= f.select(:timeend, options_for_select(hours), {}, class: 'find-field find-time') %>
+      <%= f.select(:timeend, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
     </div>
     <div class="find-row">
-      <%= f.label :timestart2, 'Segundo horario (opcional)' %><br>
-      <%= f.select(:timestart2, options_for_select(hours), {}, class: 'find-field find-time') %>
+      <%= f.label :timestart2, 'Segundo horario (opcional)' %>
+      <%= f.select(:timestart2, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
       <span>a</span>
-      <%= f.select(:timeend2, options_for_select(hours), {}, class: 'find-field find-time') %>
+      <%= f.select(:timeend2, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
     </div>
     <div class="find-row">
-      <%= f.label :days, 'Días en que puede presentarse' %><br>
+      <%= f.label :days, 'Días en que puede presentarse' %>
       <div class="flex-row">
         <% days = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'] %>
         <% days.each do |day| %>
@@ -67,27 +68,27 @@
   <div class="find-section">
     <h3 class="find-subtitle">Lugar al que asistir para donar</h3>
     <div class="find-row">
-      <%= f.label :hospital, 'Nombre del lugar' %><br>
+      <%= f.label :hospital, 'Nombre del lugar' %>
       <%= f.text_field :hospital, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :street, 'Calle' %><br>
+      <%= f.label :street, 'Calle' %>
       <%= f.text_field :street, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :number, 'Número' %><br>
+      <%= f.label :number, 'Número' %>
       <%= f.text_field :number, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :colony, 'Colonia' %><br>
+      <%= f.label :colony, 'Colonia' %>
       <%= f.text_field :colony, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :zipcode, 'Código Postal' %><br>
+      <%= f.label :zipcode, 'Código Postal' %>
       <%= f.text_field :zipcode, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :state, 'Estado' %><br>
+      <%= f.label :state, 'Estado' %>
       <%= f.select(:state,
         options_for_select(
           [
@@ -103,29 +104,29 @@
             ['Tamaulipas'],     ['Tlaxcala'],         ['Veracruz'],
             ['Yucatán'],        ['Zacatecas']
           ],
-        ), {}, class: 'find-field') %>
+        ), {include_blank: 'Estado'}, class: 'find-field find-select') %>
     </div>
     <div class="find-row">
-      <%= f.label :city, 'Municipio' %><br>
+      <%= f.label :city, 'Municipio' %>
       <%= f.text_field :city, class: 'find-field' %>
     </div>
   </div>
   <div class="find-section">
     <h3 class="find-subtitle">Persona(s) para contacto</h3>
     <div class="find-row">
-      <%= f.label :contact, 'Nombre' %><br>
+      <%= f.label :contact, 'Nombre' %>
       <%= f.text_field :contact, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :phone, 'Teléfono' %><br>
+      <%= f.label :phone, 'Teléfono' %>
       <%= f.telephone_field :phone, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :contact2, 'Nombre (opcional)' %><br>
+      <%= f.label :contact2, 'Nombre (opcional)' %>
       <%= f.text_field :contact2, class: 'find-field' %>
     </div>
     <div class="find-row">
-      <%= f.label :phone2, 'Teléfono (opcional)' %><br>
+      <%= f.label :phone2, 'Teléfono (opcional)' %>
       <%= f.telephone_field :phone2, class: 'find-field' %>
     </div>
   </div>

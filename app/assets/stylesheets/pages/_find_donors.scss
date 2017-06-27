@@ -71,6 +71,11 @@
     width: 100%;
   }
 
+  .find-select {
+    appearance: none;
+    background: $white url('triangle-normal.svg') 96% no-repeat;
+  }
+
   .find-time {
     width: 46%
   }

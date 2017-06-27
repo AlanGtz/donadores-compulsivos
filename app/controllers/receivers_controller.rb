@@ -30,8 +30,12 @@ class ReceiversController < ApplicationController
   def create
     @receiver = Receiver.new(receiver_params)
    
-    @receiver.save
-    redirect_to @receiver
+    if @receiver.save
+      redirect_to @receiver
+    else
+      flash.now[:error] = 'Por favor, revisa que todos los campos sean llenados correctamente.'
+      render 'receivers/new'
+    end
   end
 
   def bloodtypes

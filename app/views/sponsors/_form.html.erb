@@ -3,7 +3,7 @@
   <%= form_for :sponsor, url: sponsors_path do |f| %>
   	<%= f.text_field :name, class: 'sponsor-us-field', placeholder: 'Nombre' %>
   	<%= f.text_field :phone, class: 'sponsor-us-field', placeholder: 'Teléfono' %>
-  	<%= f.text_field :email, class: 'sponsor-us-field', placeholder: 'e-mail' %>
+  	<%= f.email_field :email, class: 'sponsor-us-field', placeholder: 'e-mail' %>
   	<%= f.select(:state,
         options_for_select(
           [
@@ -19,7 +19,7 @@
             ['Tamaulipas'],     ['Tlaxcala'],         ['Veracruz'],
             ['Yucatán'],        ['Zacatecas']
           ],
-        ), {}, class: 'sponsor-us-field') %>
+        ), {include_blank: 'Estado'}, class: 'sponsor-us-field sponsor-us-select') %>
     <%= f.text_field :city, class: 'sponsor-us-field', placeholder: 'Ciudad' %>
     <%= f.text_field :organization, class: 'sponsor-us-field', placeholder: 'Organización' %>
   	<%= f.submit 'Enviar', class: 'sponsor-us-submit' %>

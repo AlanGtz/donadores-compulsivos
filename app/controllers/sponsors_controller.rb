@@ -5,9 +5,13 @@ class SponsorsController < ApplicationController
   def create
     @sponsor = Sponsor.new(sponsor_params)
  
-    @sponsor.save
-    redirect_to new_sponsor_path
-    flash[:success] = 'Enviado correctamente, te contactaremos pronto.'
+    if @sponsor.save
+      redirect_to new_sponsor_path
+      flash[:success] = 'Enviado correctamente, te contactaremos pronto.'
+    else
+      flash.now[:error] = 'Por favor, revisa que todos los campos sean llenados correctamente.'
+      render 'sponsors/new'
+    end
   end
 
   private
