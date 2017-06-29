@@ -1,41 +1,49 @@
 .sponsors {
-  background-color: $red-blood;
+  background: $red-blood url('sponsorus.png') center/cover no-repeat;
 }
 
 .brands {
-  background: url('brands.svg');
   height: 650px;
   position: relative;
   width: 100%;
 }
 
 .sponsor-wrapper {
-  @include centerer(true, true);
-
-  text-align: center; 
+  @include make-sm-column(4);
+  @include make-sm-column-offset(2);
+  @include centerer(false,true);
 }
 
 .sponsor-title {
-  color: $white;
-  font-size: 80px;
+  color: $red-blood;
+  font-size: 45px;
   font-weight: lighter;
-  margin: 0 0 20px;
-  opacity: 1;
+  line-height: 35px;
+  margin: 0;
   text-transform: uppercase;
 }
 
+.sponsor-paragraph {
+  @include make-sm-column(10);
+
+  font-family: $light;
+  margin-bottom: 30px;
+  padding: 0;
+}
+
 .sponsor-btn {
-  background-color: $white;
+  background-color: transparent;
+  border: solid 2px $red-blood;
   border-radius: 4px;
   color: $red-blood;
+  font-family: $medium;
   font-size: 18px;
-  padding: 8px 14px;
+  font-weight: bold;
+  padding: 10px 13px 8px;
   text-transform: uppercase;
 
   &:hover {
     color: $white;
-    background-color: transparent;
-    border: solid 2px $white;
-    padding: 6px 12px;
+    background-color: $red-blood;
   }
 }

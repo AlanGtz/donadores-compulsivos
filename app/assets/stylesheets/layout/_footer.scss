@@ -80,15 +80,27 @@
   @include make-sm-column(4);
 
   color: $white;
-  margin-top: 40px;
+  margin-top: 10px;
 
   .footer-center-col {
   	@include centerer(true, false);
+
+    min-width: 235px;
+  }
+
+  .footer-navigation {
+    float: left;
+    margin-right: 15px;
+
+    .sub {
+      margin-left: 12px;
+    }
   }
 
   .footer-title {
   	font-size: 17px;
   	font-weight: initial;
+    margin: 0;
   	text-transform: uppercase;
   }
 
@@ -99,5 +111,22 @@
   	a {
   	  color: $white;
   	}
+  }
+
+  .footer-teaminfo {
+    margin-top: 40px;
+  }
+
+  .footer-team {
+    display: inline-block;
+    font-family: $light;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 8px 0;
+  }
+
+  .footer-teamlogo {
+    display: block;
+    float: right;
   }
 }

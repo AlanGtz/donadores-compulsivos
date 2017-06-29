@@ -29,7 +29,7 @@
 .big-buttons {
   @include centerer(true, false);
 
-  bottom: 0;
+  bottom: 30px;
   min-width: 660px;
   width: 52%;
 }
