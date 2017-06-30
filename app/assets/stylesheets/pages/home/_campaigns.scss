@@ -27,8 +27,8 @@
 
 .campaign-navigation {
   @include make-sm-column(8);
-  @include make-sm-column-offset(1.8);
-  @include make-lg-column(5.5);
+  @include make-sm-column-offset(2);
+  @include make-lg-column(6);
   @include make-lg-column-offset(3);
   @include centerer(false, true);
 

@@ -4,10 +4,9 @@
 }
 
 .our-wave {
-  background: url('wave.svg') 0/cover no-repeat;
+  background: $red-blood url('wave.svg') 0/100% 61px no-repeat;
   height: 60px;
   position: absolute;
-  top: -23px;
   width: 100%;
 
   .about-play {
@@ -17,7 +16,7 @@
     border-radius: 20px;
     display: block;
     height: 80px;
-    top: -30px;
+    top: -20px;
     width: 144px;
     z-index: 100;
   }

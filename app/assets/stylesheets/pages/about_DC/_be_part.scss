@@ -1,6 +1,8 @@
 .be-part {
-  height: 920px !important;
+  overflow: auto;
+  margin-bottom: 60px;
   padding: 0 15px;
+  width: 100%;
 }
 
 .be-item {
@@ -14,8 +16,9 @@
   border-radius: 20px;
   color: $white;
   font-family: $light;
-  margin: 20px;
-  height: 75%;
+  margin: 20px auto;
+  max-width: 350px;
+  height: 79%;
   text-align: center;
 
   .be-head {
@@ -24,12 +27,22 @@
   	padding-top: 30px;
 
   	.be-icon {
-	  background-color: $white;
-	  border-radius: 50%;
-  	  height: 25px;
+  	  height: 26px;
   	  margin: 0 auto;
-  	  width: 25px;
+  	  width: 42px;
   	}
+
+    .be-icon1 {
+      background: url('gear.svg') center center no-repeat;
+    }
+
+    .be-icon2 {
+      background: url('heart.svg') center center no-repeat;
+    }
+
+    .be-icon3 {
+      background: url('gradcap.svg') center center no-repeat;
+    }
 
   	.be-title {
   	  font-size: 25px;
@@ -43,7 +56,8 @@
   }
 
   .be-btn {
-  	color: $white;
+  	background-color: $white;
+    color: $red-blood;
   	border: solid 2px $white;
   	border-radius: 5px;
   	font-family: $bold;
@@ -52,22 +66,34 @@
   	text-transform: uppercase;
 
   	&:hover {
-  	  background-color: $white;
-  	  color: $red-blood;
+  	  background-color: transparent;
+  	  color: $white;
   	}
   }
 
   .be-picture {
-  	@include make-sm-column(10);
-  	@include make-sm-column-offset(1);
+  	@include make-sm-column(9.5);
+  	@include make-sm-column-offset(1.25);
 
   	background-color: $cloud;
-  	border-radius: 12px;
+  	border-radius: 10px;
   	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
-  	padding-bottom: 95%;
+  	padding-bottom: 96%;
   	margin-bottom: 50px;
   	margin-top: 60px;
   	z-index: 100;
+  }
+
+  .be-picture1 {
+    background: url('working.jpg') center/cover no-repeat;
+  }
+  
+  .be-picture2 {
+    background: url('loving.jpg') center/cover no-repeat;
+  }
+  
+  .be-picture3 {
+    background: url('studying.jpg') center/cover no-repeat;
   }
 }
 

@@ -18,7 +18,7 @@
   <p class="cartel-address">Col. <%= @receiver.colony %> C.P. <%= @receiver.zipcode %></p>
   <p class="cartel-address"><%= @receiver.city %>, <%= @receiver.state %></p>
   <p class="cartel-days">¿Cuándo? &nbsp;<span><%= @receiver.days.join(', ') %></span></p>
-  <p class="cartel-time"><%= @receiver.timestart %> a <%= @receiver.timeend %> / <%= @receiver.timestart2 %> a <%= @receiver.timeend2 %></p>
+  <p class="cartel-time"><%= @receiver.timestart %> a <%= @receiver.timeend %><%= " / #{@receiver.timestart2}" %><%= " a #{@receiver.timeend2}" %></p>
   <div class="cartel-division">
   	<p class="cartel-label">Contacto:</p>
   </div>
@@ -35,6 +35,6 @@
 
 <div class="download-wrapper">
   <h3 class="download-title">¡Su solicitud está lista!</h3>
-  <p class="download-text">Descargue su solicitud para que pueda compartirla en sus redes sociales con todos sus contactos.</p>
+  <p class="download-text">Tu anuncio está listo para que lo descargues y compartas en redes sociales. Ojo, el anuncio por sí solo no llega a mucha gente, te recomendamos compartirlo y etiquetar a tus amigos, llegará a más personas y las probabilidades de tener éxito aumentaran. De esta manera hemos podido ayudar a muchas personas a encontrar ayuda. ¡Suerte!</p>
   <a id="btn-Convert-Html2Image" href="#" class="download-btn">Descargar imagen</a>
 </div>

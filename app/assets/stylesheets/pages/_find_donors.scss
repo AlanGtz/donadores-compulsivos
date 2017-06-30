@@ -28,8 +28,10 @@
 }
 
 .find-form {
-  @include make-sm-column(7);
-  @include make-sm-column-offset(2.5);
+  @include make-md-column(10);
+  @include make-md-column-offset(1);
+  @include make-lg-column(7);
+  @include make-lg-column-offset(2.5);
 
   background-color: $grey-bg;
   border-radius: 20px;
@@ -58,6 +60,10 @@
     @include make-sm-column(6);
 
     min-height: 70px;
+
+    .find-label {
+      display: block;
+    }
   }
 
   .find-field {
