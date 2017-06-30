@@ -4,11 +4,22 @@
 }
 
 .our-wave {
-  background: url('wave.svg') 0/cover no-repeat;
+  background: $red-blood url('wave.svg') 0/101% 64px no-repeat;
   height: 60px;
   position: absolute;
-  top: -59px;
   width: 100%;
+
+  .about-play {
+    @include centerer(true, false);
+
+    background: $white url('play-about.svg') 58px 21.5px/38px 38px no-repeat;
+    border-radius: 20px;
+    display: block;
+    height: 80px;
+    top: -20px;
+    width: 144px;
+    z-index: 100;
+  }
 }
 
 .our-left {
@@ -23,7 +34,6 @@
   	border-right: none;
   	color: $white;
   	margin-right: 10px;
-  	margin-top: 50px;
   	max-width: 300px;
   	padding: 40px 0 40px 30px;
   	position: absolute;
@@ -46,7 +56,6 @@
   	color: $red-blood;
   	left: 0;
   	margin-left: 10px;
-  	margin-top: -50px;
   	max-width: 300px;
   	padding: 40px 30px 40px 0;
   	position: absolute;

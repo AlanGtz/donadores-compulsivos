@@ -2,38 +2,58 @@
   <div class="footer-wave"></div>
   <div class="footer-social">
     <div class="footer-item">
-      <%= link_to image_tag('facebook.png'), 'facebook.com', class: 'footer-facebook footer-snlink circle' %>
+      <a href="https://www.facebook.com/DonadoresCompulsivos/" class="footer-facebook footer-snlink circle">
+        <div class="facebook-icon"></div>
+      </a>
     </div>
     <div class="footer-item">
-      <%= link_to image_tag('instagram.png'), 'instagram.com', class: 'footer-instagram footer-snlink circle' %>
+      <a href="https://www.instagram.com/donadorescompulsivos/" class="footer-instagram footer-snlink circle">
+        <div class="instagram-icon"></div>
+      </a>
     </div>
     <div class="footer-item">
-      <%= link_to image_tag('twitter.png'), 'twitter.com', class: 'footer-twitter footer-snlink circle' %>
+      <a href="https://twitter.com/dcompulsivos" class="footer-twitter footer-snlink circle">
+        <div class="twitter-icon"></div>
+      </a>
     </div>
   </div>	
   <div class="footer-column">
   	<div class="footer-center-col">
   	  <h4 class="footer-title">Contacto</h4>
-  	  <p class="footer-paragraph">Av. Lorem Ipsum #000</p>
-  	  <p class="footer-paragraph">Colima, Col., Méx.</p>
-  	  <p class="footer-paragraph">(312) 000 00 00</p>
-  	  <p class="footer-paragraph">donadores@compulsivos.org</p>
+  	  <p class="footer-paragraph">Calle Juárez No. 386</p>
+  	  <p class="footer-paragraph">Col. Centro, C.P. 28000</p>
+  	  <p class="footer-paragraph">Colima, Col.</p>
+      <p class="footer-paragraph">info@donadorescompulsivos.org</p>
   	</div>
   </div>
   <div class="footer-column">
   	<div class="footer-center-col">
   	  <h4 class="footer-title">Política de privacidad</h4>
-  	  <p class="footer-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  	  <p class="footer-paragraph">Los datos ingresados en la página no son recopilados por Donadores Compulsivos de ninguna manera. La publicación de los mismos corre a cargo del usuario y Donadores Compulsivos no se hace responsable de este uso.</p>
+      <div class="footer-teaminfo">
+        <p class="footer-team">Patrocinado por <%= link_to 'Carlos Rocha', 'https://www.linkedin.com/in/carlosrochacuevas/' %></p>
+        <p class="footer-team">Diseñado y desarrollado por</p>
+        <%= link_to image_tag('tribe-logo.svg'), 'http://www.tribe.cx/', class: 'footer-teamlogo' %>
+      </div>
   	</div>
   </div>
   <div class="footer-column">
   	<div class="footer-center-col">
   	  <h4 class="footer-title">Navegación</h4>
-  	  <p class="footer-paragraph"><%= link_to 'Inicio', home_path %></p>
-  	  <p class="footer-paragraph"><%= link_to 'Sobre DC', about_us_path %></p>
-  	  <p class="footer-paragraph"><%= link_to 'Blog', root_path %></p>
-  	  <p class="footer-paragraph"><%= link_to 'Contacto', contact_path %></p>
-  	  <p class="footer-paragraph"><%= link_to 'FAQ', faq_path %></p>
+      <div class="footer-navigation">
+        <p class="footer-paragraph"><%= link_to '> Inicio', home_path %></p>
+        <p class="footer-paragraph"><%= link_to '> Sobre DC', about_us_path %></p>
+        <p class="footer-paragraph"><%= link_to '> Blog', root_path %></p>
+        <p class="footer-paragraph"><%= link_to '> Contacto', new_contact_path %></p>
+        <p class="footer-paragraph"><%= link_to '> FAQ', faq_path %></p>
+      </div>
+      <div class="footer-navigation">
+        <p class="footer-paragraph"><%= link_to '> Quiero donar', donate_path %></p>
+        <p class="footer-paragraph"><%= link_to '> Busco donadores', find_donors_path %></p>
+        <p class="footer-paragraph"><%= link_to '> Quiero ayudar', support_us_path %></p>
+        <p class="footer-paragraph sub"><%= link_to '  > Donaciones', donate_money_path %></p>
+        <p class="footer-paragraph sub"><%= link_to '  > Patrocinio', new_sponsor_path %></p>
+      </div>
   	</div>
   </div>
 </footer>

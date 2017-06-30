@@ -7,6 +7,21 @@
   line-height: 40px;
   padding-top: 8%;
   text-transform: uppercase;
+
+  .testimony-videos {
+    color: $red-blood;
+    display: inline-block;
+    font-size: 18px;
+
+    .testimony-play {
+      background: url('play-red-icon.svg') 0 0/cover no-repeat;
+      display: block;
+      float: right;
+      height: 22px;
+      margin: 9px 0 0 7px;
+      width: 22px;
+    }
+  }
 }
 
 .testimony-cards {

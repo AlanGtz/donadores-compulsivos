@@ -1,5 +1,5 @@
 .cover {
-  background: url('donadores-cover.png') 0 -50px/cover no-repeat;
+  background: url('donadores-cover.png') center/cover no-repeat;
   height: 606px;
   position: relative;
 }
@@ -29,7 +29,7 @@
 .big-buttons {
   @include centerer(true, false);
 
-  bottom: 0;
+  bottom: 30px;
   min-width: 660px;
   width: 52%;
 }

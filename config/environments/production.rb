@@ -29,7 +29,10 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = false
+  config.assets.compile = true
+
+  config.serve_static_assets = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
@@ -79,13 +82,13 @@ Rails.application.configure do
 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.delivery_method = :smtp
-  # SMTP settings for gmail
+  # SMTP settings for mail
   config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
+  :address              => "mail.donadorescompulsivos.org",
   :port                 => 587,
   :enable_starttls_auto => true,
-  :user_name            => ENV['gmail_username'],
-  :password             => ENV['gmail_password'],
+  :user_name            => ENV['mail_username'],
+  :password             => ENV['mail_password'],
   :authentication       => "plain",
   :ssl =>    false,
   :openssl_verify_mode  => 'none'

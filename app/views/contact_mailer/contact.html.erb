@@ -6,16 +6,19 @@
   <body>
     <h1>Alguien ha escrito a Donadores compulsivos</h1>
     <p>
-      Nombre: <%= @name %>
+      Asunto: <%= @contact.subject %>
     </p>
     <p>
-      Email: <%= @email %>
+      Nombre: <%= @contact.name %>
     </p>
     <p>
-      Teléfono: <%= @phone %>
+      Teléfono: <%= @contact.phone %>
     </p>
     <p>
-      <%= @message %>
+      Email: <%= @contact.email %>
+    </p>
+    <p>
+      <%= @contact.message %>
     </p>
   </body>
 </html>

@@ -18,21 +18,22 @@
     margin-top: 60px;
 
     .contact-left {
-      @include make-sm-column(6);
+      @include make-sm-column(5);
 
       padding: 0 10px 0 0;
     }
 
     .contact-right {
-      @include make-sm-column(6);
+      @include make-sm-column(7);
 
       padding: 0 0 0 10px;
 
       .contact-field {
-        max-height: 205px;
-        min-height: 205px;
+        max-height: 207px;
+        min-height: 207px;
         max-width: 100%;
         min-width: 100%;
+        padding: 8px 20px;
       }
     }
 
@@ -40,10 +41,15 @@
       border: none;
       border-radius: 5px;
       font-family: $light;
-      height: 55px;
-      margin: 10px 0;
-      padding: 20px;
+      height: 33px;
+      margin: 12.5px 0;
+      padding: 0 20px;
       width: 100%;
+    }
+
+    .contact-select {
+      appearance: none;
+      background: $white url('triangle.svg') 96% center no-repeat;
     }
 
     .contact-submit {

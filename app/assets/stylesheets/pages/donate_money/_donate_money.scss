@@ -1,0 +1,57 @@
+.donate-options {
+  background-color: $red-blood;
+  overflow: auto;
+  width: 100%;
+}
+
+.money-title {
+  color: $white;
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 60px 0 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.money-wrapper {
+  @include make-sm-column(6);
+  @include make-sm-column-offset(3);
+
+  background-color: $white;
+  border-radius: 20px;
+  height: 300px;
+  margin-bottom: 20px;
+  padding: 15px 15px;
+
+  .money-subtitle {
+    color: $red-blood;
+    font-size: 22px;
+    font-weight: lighter;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  .money-spots {
+    background: url('donation-spots.png') center center no-repeat;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .money-bank {
+    @include make-sm-column(5);
+    @include make-sm-column-offset(0.5);
+
+    font-family: $light;
+
+    .money-bold {
+      font-weight: bold;
+    }
+  }
+
+  .money-info {
+    @include make-sm-column(6);
+
+    font-family: $light;
+  }
+}

@@ -4,20 +4,31 @@
   position: relative;
 
   .about-title {
-  	@include make-sm-column-offset(2.5);
+    @include make-md-column-offset(1);
+  	@include make-lg-column-offset(2);
 
   	display: inline-block;
-  	font-size: 50px;
+  	font-size: 60px;
   	font-weight: lighter;
-  	line-height: 40px;
+  	line-height: 50px;
   	padding: 0;
   	position: absolute;
   	text-align: right;
   	text-transform: uppercase;
-  	top: 15%;
+  	top: 2%;
   }
 
   .about-paragraph {
+    @include make-sm-column(3);
+    @include make-sm-column-offset(3.4);
+
+    bottom: 5%;
+    font-family: $light;
+    position: absolute;
+    text-align: right;
+  }
+
+  .about-paragraph2 {
   	@include make-sm-column(1.95);
   	@include make-sm-column-offset(9.5);
 
@@ -43,21 +54,21 @@
 
 .abcard-1 {
   @include make-sm-column-offset(1);
+  @include centerer(false,true);
 
-  background: url('about-card-1.png') -20px -20px/108% 113% no-repeat;
-  bottom: 20%;
+  background: url('about-card1.png') center/cover no-repeat;
 }
 
 .abcard-2 {
   @include make-sm-column-offset(5);
 
-  background: url('about-card-2.png') -20px -20px/108% 113% no-repeat;
+  background: url('about-card2.png') center/cover no-repeat;
   top: 5%;
 }
 
 .abcard-3 {
   @include make-sm-column-offset(6.5);
 
-background: url('about-card-3.png') -20px -20px/108% 113% no-repeat;
+  background: url('about-card3.png') center/cover no-repeat;
   bottom: 10%;
 }

@@ -1,0 +1,40 @@
+<div id="html-content-holder" class="cartel">
+  <h2 class="cartel-state">¡Atención <%= @receiver.state %>!</h2>
+  <h1 class="cartel-title">Se buscan donadores</h1>
+  <p class="cartel-type">de <%= @receiver.donationtype %></p>
+  <div class="cartel-bloodtypes">
+  	<p class="cartel-info">Puedes donar si tu tipo de sangre es</p>
+  	<div class="cartel-blood">
+      <% @bloodtypes.each do |b| %>
+  	  <div class="cartel-item"><%= b %></div>
+      <% end %>
+  	</div>
+  </div>
+  <p class="cartel-units">se necesitan <span class="cartel-bold"><%= @receiver.units %></span> unidades</p>
+  <div class="cartel-division"></div>
+  <p class="cartel-name">Para: &nbsp;<span><%= @receiver.name %></span></p>
+  <p class="cartel-place">Presentarse en: &nbsp;<span><%= @receiver.hospital %></span></p>
+  <p class="cartel-address"><%= @receiver.street %> No. <%= @receiver.number %></p>
+  <p class="cartel-address">Col. <%= @receiver.colony %> C.P. <%= @receiver.zipcode %></p>
+  <p class="cartel-address"><%= @receiver.city %>, <%= @receiver.state %></p>
+  <p class="cartel-days">¿Cuándo? &nbsp;<span><%= @receiver.days.join(', ') %></span></p>
+  <p class="cartel-time"><%= @receiver.timestart %> a <%= @receiver.timeend %><%= " / #{@receiver.timestart2}" %><%= " a #{@receiver.timeend2}" %></p>
+  <div class="cartel-division">
+  	<p class="cartel-label">Contacto:</p>
+  </div>
+  <div class="cartel-contact">
+  	<p class="cartel-person"><%= @receiver.contact %></p>
+  	<p class="cartel-phone"><%= @receiver.phone %></p>
+  </div>
+  <div class="cartel-contact">
+  	<p class="cartel-person"><%= @receiver.contact2 %></p>
+  	<p class="cartel-phone"><%= @receiver.phone2 %></p>
+  </div>
+  <div class="cartel-footer"></div>
+</div>
+
+<div class="download-wrapper">
+  <h3 class="download-title">¡Su solicitud está lista!</h3>
+  <p class="download-text">Tu anuncio está listo para que lo descargues y compartas en redes sociales. Ojo, el anuncio por sí solo no llega a mucha gente, te recomendamos compartirlo y etiquetar a tus amigos, llegará a más personas y las probabilidades de tener éxito aumentaran. De esta manera hemos podido ayudar a muchas personas a encontrar ayuda. ¡Suerte!</p>
+  <a id="btn-Convert-Html2Image" href="#" class="download-btn">Descargar imagen</a>
+</div>

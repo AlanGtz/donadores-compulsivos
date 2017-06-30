@@ -25,6 +25,7 @@
 
 // 2. Vendors
 @import
+  'vendor/magnific_popup',
   'vendor/normalize';
 
 // 3. Base stuff
@@ -43,6 +44,7 @@
 
 // 5. Components
 @import
+  'components/alert',
   'components/button';
 
 // 6. Page-specific styles
@@ -55,9 +57,16 @@
   'pages/about_DC/what_we_do',
   'pages/about_DC/our_values',
   'pages/about_DC/be_part',
+  'pages/donate_money/donate_money',
+  'pages/donate_money/donate_causes',
+  'pages/donate_results',
+  'pages/cartel',
   'pages/contact',
+  'pages/donate_blood',
   'pages/faq',
+  'pages/find_donors',
   'pages/sponsors',
+  'pages/sponsor_us',
   'pages/support_us';
 
 // 7. Themes

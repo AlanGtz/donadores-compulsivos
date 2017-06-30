@@ -1,0 +1,133 @@
+.donors-able, .donors-unable {
+  background-color: $grey-bg;
+  overflow: auto;
+  width: 100%;
+}
+
+.able-title {
+  color: $red-blood;
+  font-size: 60px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 60px 0 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.able-text {
+  @include make-sm-column(4);
+  @include make-sm-column-offset(4);
+
+  font-family: $light;
+  margin: 20px 0 40px;
+  text-align: center;
+
+  .able-bold {
+  	font-family: $medium;
+  }
+}
+
+.able-cities {
+  @include make-sm-column(8);
+  @include make-sm-column-offset(2);
+
+  background-color: $white;
+  border-radius: 10px;
+  margin: 20px;
+  overflow: auto;
+  padding: 15px 10px;
+
+  .able-city {
+  	@include make-sm-column(6);
+
+  	padding: 10px 60px;
+
+  	.able-cityname {
+  	  color: $red-blood;
+  	  font-size: 22px;
+  	  font-weight: lighter;
+  	  line-height: 22px;
+  	  margin: 0;
+  	}
+
+  	.able-place {
+  	  font-family: $medium;
+  	  margin: 10px 0 0;
+  	}
+
+  	&:first-child {
+  	  border-right: solid 1px $smoke;
+  	}
+
+  	.able-address {
+  	  font-family: $light;
+  	  margin: 0;
+  	}
+  }
+}
+
+.able-advices {
+  @include make-sm-column(8);
+  @include make-sm-column-offset(2);
+
+  color: $white;
+  margin: 30px 0 160px;
+  padding: 0;
+
+  .able-requirements {
+  	@include make-sm-column(5.75);
+
+  	background-color: $red-blood;
+  	border-radius: 10px;
+  	min-height: 380px;
+  	overflow: auto;
+  	padding: 20px 40px;
+  }
+
+  .able-recommendations {
+  	@include make-sm-column(5.75);
+  	@include make-sm-column-offset(0.5);
+
+  	background-color: $black;
+  	border-radius: 10px;
+  	min-height: 380px;
+  	overflow: auto;
+  	padding: 20px 40px;
+  }
+
+  .able-subtitle {
+  	font-size: 22px;
+  	font-weight: lighter;
+  	margin: 0;
+  	text-align: center;
+  	text-transform: uppercase;
+  }
+
+  .able-point {
+  	font-family: $light;
+  }
+}
+
+.unable-wrapper {
+  @include make-sm-column(3.5);
+  @include centerer(true,true);
+
+  text-align: center;
+
+  .unable-title {
+  	font-family: $medium;
+  	font-size: 20px;
+  	font-weight: lighter;
+  }
+
+  .unable-description {
+  	font-family: $light;
+  	margin: 30px 0 35px;
+  }
+
+  .unable-btn {
+  	font-size: 17px;
+  	padding: 8px 39px;
+  	text-transform: uppercase;
+  }
+}

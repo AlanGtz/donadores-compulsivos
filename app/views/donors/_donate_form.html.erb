@@ -1,0 +1,111 @@
+<h1 class="donate-title">Quiero ser donador</h1>
+<p class="donate-description">Antes que nada, debes tener 100% la voluntad de donar sin esperar recibir nada cambio, sólo la satisfacción de ayudar a quien lo necesite. Para saber si cumples con los requisitos básicos para donar, contesta este sencillo cuestionario:</p>
+
+
+<%= form_for :donor, url: donors_path, html: {class: 'donate-wrapper'} do |f| %>
+
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Tienes entre 18 y 65 años de edad?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :age, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :age_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :age, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :age_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Pesas más de 50 kilos?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :weight, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :weight_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :weight, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :weight_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Has padecido de ataques epilépticos, convulsiones o enfermedades del corazón?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :disease, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :disease_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :disease, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :disease_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Te has sometido a una operación en los últimos 6 meses?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :operation, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :operation_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :operation, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :operation_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Te has tatuado, hecho piercings o acupuntura en el último año?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :tattoo, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :tattoo_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :tattoo, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :tattoo_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Estas embarazada o lactando?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :pregnancy, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :pregnancy_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :pregnancy, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :pregnancy_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Has tenido actividades sexuales riesgosas en el último año?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :sex, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :sex_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :sex, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :sex_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Te han puesto una vacuna en los últimos 28 días?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :vaccine, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :vaccine_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :vaccine, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :vaccine_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-item">
+  	<div class="donate-container">
+  	  <p class="donate-question">¿Padeciste hepatitis después de los 10 años?</p>
+  	  <div class="donate-answers">
+  	    <%= f.radio_button :hepatitis, 'yes', class: 'donate-radiobtn' %>
+  	    <%= f.label :hepatitis_yes, 'Sí', class: 'donate-radio' %>
+  	    <%= f.radio_button :hepatitis, 'no', class: 'donate-radiobtn' %>
+  	    <%= f.label :hepatitis_no, 'No', class: 'donate-radio' %>
+  	  </div>
+  	</div>
+  </div>
+  <div class="donate-row">
+    <%= f.check_box :result, {class: 'donate-checkbox'}, 'able', false %>
+  	<%= f.submit '¿Puedo donar?', disabled: true, class: 'donate-submit donate-inactive' %>
+  </div>
+
+<% end %>

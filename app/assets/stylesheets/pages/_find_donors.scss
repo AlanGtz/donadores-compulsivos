@@ -1,0 +1,158 @@
+.find-donors, .how-it-works {
+  background-color: $red-blood;
+}
+
+.find-donors {
+  overflow: auto;
+  width: 100%;
+}
+
+.find-title {
+  color: $white;
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 60px 0 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.find-description {
+  @include make-sm-column(5);
+  @include make-sm-column-offset(3.5);
+
+  color: $white;
+  font-family: $light;
+  margin: 20px;
+  text-align: center;
+}
+
+.find-form {
+  @include make-md-column(10);
+  @include make-md-column-offset(1);
+  @include make-lg-column(7);
+  @include make-lg-column-offset(2.5);
+
+  background-color: $grey-bg;
+  border-radius: 20px;
+  font-family: $light;
+  font-size: 15px;
+  margin: 20px 0 160px;
+  padding: 25px 15px;
+}
+
+.find-section {
+  @include make-sm-column(11);
+  @include make-sm-column-offset(0.5);
+
+  min-height: 70px;
+  padding: 5px 15px 0;
+
+  .find-subtitle {
+  	font-family: $bold;
+  	font-weight: lighter;
+  	margin: 10px 0;
+  	padding: 0 15px;
+  	width: 100%;
+  }
+
+  .find-row {
+    @include make-sm-column(6);
+
+    min-height: 70px;
+
+    .find-label {
+      display: block;
+    }
+  }
+
+  .find-field {
+  	appearance: none;
+  	background-color: $white;
+  	border: solid 1px $cloud;
+    border-radius: 5px;
+    height: 33px;
+    margin: 10px 0;
+    padding: 6px 15px;
+    width: 100%;
+  }
+
+  .find-select {
+    appearance: none;
+    background: $white url('triangle-normal.svg') 96% no-repeat;
+  }
+
+  .find-time {
+    width: 46%
+  }
+
+  span {
+    display: inline-block;
+    margin: -5px;
+    padding: 0;
+    text-align: center;
+    width: 8%;
+  }
+
+  .find-checkbox {
+    display: none;
+  }
+
+  .find-checkbox + .find-check {
+    background-color: $white;
+    border: solid 1px $cloud;
+    border-radius: 5px;
+    color: $smoke;
+    font-size: 11px;
+    height: 33px;
+    line-height: 31px;
+    margin: 10px 0;
+    padding-right: 1px;
+    text-align: center;
+    width: 33px;
+  }
+
+  .find-checkbox:checked + .find-check {
+    background-color: $grass;
+    border: solid 1px $grass;
+    color: $white;
+  }
+
+  .flex-row {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+
+    label:first-child {
+      display: inline-flex;
+    }
+  }
+}
+
+.find-submit {
+  @include centerer(true, false);
+
+  border: none;
+  font-family: $bold;
+  font-weight: lighter;
+  height: 32px;
+  margin: 20px 0;
+  padding: 0 50px;
+  text-transform: uppercase;
+}
+
+.hiw-square {
+  @include make-sm-column(10);
+  @include make-sm-column-offset(1);
+
+  border: solid 2px $white;
+  height: 95%;
+  margin-top: 5%;
+
+  .hiw-title {
+    color: $white;
+    font-size: 50px;
+    font-weight: lighter;
+    text-align: center;
+  }
+}

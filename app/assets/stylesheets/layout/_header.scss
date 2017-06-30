@@ -31,8 +31,9 @@
     border-right: solid 1px $white;
     color: $white;
     display: inline-block;
-    font-size: 15px;
-    font-weight: 500;
+    font-family: $light;
+    font-size: 14px;
+    font-weight: bold;
     height: 13px;
     line-height: 15px;
     padding: 0 20px;
@@ -53,7 +54,7 @@
 .ayudar-btn a {
   display: inline-block;
   float: right;
-  font-size: 18px;
+  font-size: 22px;
   line-height: 40px;
   margin: 10px 15px;
   padding: 0 30px;

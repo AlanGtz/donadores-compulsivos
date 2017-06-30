@@ -16,13 +16,57 @@
     @include make-sm-column(6);
     @include make-sm-column-offset(3);
 
-  	border-bottom: solid 1px $smoke;
     height: 130px;
 
   	.footer-item {
   	  @include make-sm-column(4);
   	}
   }
+}
+
+.footer-facebook {
+  background: url('facebook.jpg') 0 0/cover no-repeat;
+
+  &:hover {
+    background: url('gifs/facebook.gif') 0 0/cover no-repeat;
+  }
+}
+
+.facebook-icon {
+  background: url('facebook.svg') center center no-repeat;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+
+.footer-instagram {
+  background: url('instagram.jpg') 0 0/cover no-repeat;
+
+  &:hover {
+    background: url('gifs/instagram.gif') 0 0/cover no-repeat;
+  }
+}
+
+.instagram-icon {
+  background: url('instagram.svg') center center no-repeat;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+}
+
+.footer-twitter {
+  background: url('twitter.jpg') 0 0/cover no-repeat;
+
+  &:hover {
+    background: url('gifs/twitter.gif') 0 0/cover no-repeat;
+  }
+}
+
+.twitter-icon {
+  background: url('twitter.svg') center center no-repeat;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
 }
 
 .footer-snlink {
@@ -36,15 +80,27 @@
   @include make-sm-column(4);
 
   color: $white;
-  margin-top: 40px;
+  margin-top: 10px;
 
   .footer-center-col {
   	@include centerer(true, false);
+
+    min-width: 235px;
+  }
+
+  .footer-navigation {
+    float: left;
+    margin-right: 15px;
+
+    .sub {
+      margin-left: 12px;
+    }
   }
 
   .footer-title {
   	font-size: 17px;
   	font-weight: initial;
+    margin: 0;
   	text-transform: uppercase;
   }
 
@@ -55,5 +111,28 @@
   	a {
   	  color: $white;
   	}
+  }
+
+  .footer-teaminfo {
+    margin-top: 40px;
+  }
+
+  .footer-team {
+    display: inline-block;
+    font-family: $light;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 8px 0;
+
+    a {
+      color: $white;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+
+  .footer-teamlogo {
+    display: block;
+    float: right;
   }
 }

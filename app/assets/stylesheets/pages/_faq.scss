@@ -13,6 +13,10 @@
   text-transform: uppercase;
 }
 
+.faq-subject {
+  margin: 0 0 15px;
+}
+
 .faq-wrapper {
   @include make-sm-column(8);
   @include make-sm-column-offset(2);

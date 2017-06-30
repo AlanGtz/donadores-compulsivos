@@ -27,6 +27,7 @@ gem 'scrollify'
 gem 'figaro'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
+gem 'magnific-popup-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -50,3 +51,6 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
