@@ -152,11 +152,19 @@
     z-index: 100;
   }
 
-  .campaign-pic-1, .campaign-pic-3 {
-  	background: url('campaign1.png') 0 0/cover no-repeat;
+  .campaign-pic-1 {
+  	background: url('campaigns/campaign4/picture1.jpg') center/cover no-repeat;
   }
 
-  .campaign-pic-2, .campaign-pic-4 {
-  	background: url('campaign2.png') -15px -15px/cover no-repeat;
+  .campaign-pic-2 {
+    background: url('campaigns/campaign4/picture2.jpg') center/cover no-repeat;
+  }
+
+  .campaign-pic-3 {
+    background: url('campaigns/campaign4/picture3.jpg') center/cover no-repeat;
+  }
+
+  .campaign-pic-4 {
+  	background: url('campaigns/campaign4/picture4.jpg') center/cover no-repeat;
   }
 }

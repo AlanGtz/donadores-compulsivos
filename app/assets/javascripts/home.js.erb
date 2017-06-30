@@ -56,6 +56,13 @@ function changeCampaign() {
       $('.campaign-more').fadeOut();
     }
   });
+
+  $('.campaign-month').on('afterChange', function(event, slick, currentSlide, nextSlide) {
+    $('.campaign-pic-1').css('background','url("<%= asset_path("assets/campaigns/campaign'+(currentSlide+1)+'/picture1.jpg")%>") center/cover no-repeat');
+    $('.campaign-pic-2').css('background','url("<%= asset_path("assets/campaigns/campaign'+(currentSlide+1)+'/picture2.jpg")%>") center/cover no-repeat');
+    $('.campaign-pic-3').css('background','url("<%= asset_path("assets/campaigns/campaign'+(currentSlide+1)+'/picture3.jpg")%>") center/cover no-repeat');
+    $('.campaign-pic-4').css('background','url("<%= asset_path("assets/campaigns/campaign'+(currentSlide+1)+'/picture4.jpg")%>") center/cover no-repeat');
+  });
 }
 
 function numberScroll() {
