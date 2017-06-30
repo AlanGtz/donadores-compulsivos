@@ -5,7 +5,7 @@ class ContactMailer < ApplicationMailer
 
   def contact(contact)
     @contact = contact
-    mail(to: 'ahgv1195@gmail.com',
+    mail(to: @contact.email,
          subject: 'Contacto',
          template_path: 'contact_mailer',
          template_name: 'contact')
@@ -13,7 +13,7 @@ class ContactMailer < ApplicationMailer
 
   def sponsor(sponsor)
     @sponsor = sponsor
-    mail(to: 'ahgv1195@gmail.com',
+    mail(to: @contact.email,
          subject: 'Patrocinio',
          template_path: 'contact_mailer',
          template_name: 'sponsor')

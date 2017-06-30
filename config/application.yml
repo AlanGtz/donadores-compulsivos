@@ -1,8 +1,8 @@
 # Add configuration values here, as shown below.
 #
 
-gmail_username: 'ahgv1195@gmail.com'
-gmail_password: '#951111Chivas'
+mail_username: 'info@donadorescompulsivos.org'
+mail_password: 'nAro7677'
 
 #
 # production:
