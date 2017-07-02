@@ -10,6 +10,12 @@ html {
   font-family: 'Gotham-Bold';
 }
 
+body {
+  background-color: $grey-bg;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value
