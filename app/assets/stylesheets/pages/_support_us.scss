@@ -26,6 +26,7 @@
 
   margin-bottom: 160px;
   overflow: auto;
+  padding: 0;
 
   .support-space {
     @include make-sm-column(6);
@@ -52,34 +53,26 @@
   }
 
   .support-description {
-    background-color: transparent;
+    background-color: $red-blood;
     border-radius: 20px;
-    color: transparent;
+    color: $white;
+    display: none;
     font-family: $light;
-    font-size: 16px;
+    font-size: 10px;
     height: calc(100% - 26px);
+    line-height: 14px;
     padding: 20px;
     position: absolute;
     width: calc(100% - 26px);
 
+    @media (min-width: $screen-md-min) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
     @media (min-width: $screen-lg-min) {
-      &:hover {
-        background-color: $red-blood;
-        color: $white;
-        line-height: 25px;
-
-        .support-btn {
-          background-color: $white;
-          border: solid 2px $white;
-          border-radius: 5px;
-          color: $red-blood;
-
-          &:hover {
-            background-color: transparent;
-            color: $white;
-          }
-        }
-      }
+      font-size: 16px;
+      line-height: 22px;
     }
 
     .support-paragraph {
@@ -97,6 +90,22 @@
       padding: 0 40px;
       position: absolute;
       text-transform: uppercase;
+    }
+  }
+
+  .support-visible {
+    display: block;
+
+    .support-btn {
+      background-color: $white;
+      border: solid 2px $white;
+      border-radius: 5px;
+      color: $red-blood;
+
+      &:hover {
+        background-color: transparent;
+        color: $white;
+      }
     }
   }
 
