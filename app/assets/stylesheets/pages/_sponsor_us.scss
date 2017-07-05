@@ -1,21 +1,29 @@
 .sponsor-us-form {
   background-color: $red-blood;
+  overflow: auto;
 }
 
 .sponsor-us-title {
   color: $white;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: lighter;
+  margin-top: 8%;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 50px;
+  }
 }
 
 .sponsor-us-wrapper {
-  @include make-sm-column(3);
+  @include make-xs-column(12);
+  @include make-sm-column(8);
   @include make-sm-column-offset(2);
+  @include make-lg-column(4);
+  @include make-lg-column-offset(2);
 
   .sponsor-us-field {
-  	appearance: none;
   	border: none;
     border-radius: 5px;
     font-family: $light;
@@ -40,7 +48,7 @@
     font-family: $light;
     font-size: 10px;
     font-weight: bold;
-    margin: 10px 0 0;
+    margin: 10px 0 100px;
     padding: 8px 40px;
     text-transform: uppercase;
 
@@ -51,19 +59,24 @@
   }
 }
 
-.sponsor-us-slideshow {
-  @include make-sm-column(4);
-  @include make-sm-column-offset(1.5);
+.slides {
+  @include make-lg-column(2);
+  @include make-lg-column-offset(2);
 
-  height: 300px;
-  margin-top: 3%;
+  padding: 0;
+
+  .sponsor-us-slideshow {
+    height: 260px;
+    margin: 3% auto 0px;
+    width: 305px;
+  }
 
   img {
     border-radius: 20px;
     box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.5);
   	cursor: pointer;
   	display: hidden;
-  	height: 350px;
-  	width: 350px;
+  	height: 200px;
+  	width: 200px;
   }
 }

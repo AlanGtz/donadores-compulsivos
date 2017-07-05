@@ -1,137 +1,140 @@
 <h1 class="find-title">Busco donadores</h1>
 <p class="find-description">La manera que tenemos de apoyarte, es ayudándote a crear un anuncio adecuado para buscar donadores en las redes sociales, para lo cual te pedimos que llenes la siguiente información, que generará la imagen para compartir. Entre más gente etiquetes, mejor.</p>
 
-<%= form_for :receiver, url: receivers_path, html: {class: 'find-form'} do |f| %>
 
-  <div class="find-section">
-    <h3 class="find-subtitle">Datos del receptor</h3>
-    <div class="find-row">
-      <%= f.label :name, '¿Quién recibirá la sangre?', class: 'find-label' %>
-      <%= f.text_field :name, class: 'find-field' %>
-    </div>
-    <div class="find-row">
-      <%= f.label :bloodtype, 'Tipo de sangre' %>
-      <%= f.select(:bloodtype,
-        options_for_select(
-          [
-            ['O+'], ['O-'],
-            ['A+'], ['A-'],
-            ['B+'], ['B-'],
-            ['AB+'], ['AB-']
-          ],
-        ), {}, class: 'find-field find-select') %>
-    </div>
-    <div class="find-row">
-      <%= f.label :donationtype, 'Tipo de donación', class: 'find-label' %>
-      <%= f.select(:donationtype,
-        options_for_select(
-          [
-            ['Sangre'],
-            ['Plaquetas'],
-            ['Sangre y plaquetas']
-          ],
-        ), {}, class: 'find-field find-select') %>
-    </div>
-    <div class="find-row">
-      <%= f.label :units, 'Unidades que necesita', class: 'find-label' %>
-      <%= f.text_field :units, class: 'find-field' %>
-    </div>
-    <div class="find-row">
-      <% hours = ['12:00 a.m.', '1:00 a.m.', '2:00 a.m.', '3:00 a.m.', '4:00 a.m.', '5:00 a.m.',
-                  '6:00 a.m.', '7:00 a.m.', '8:00 a.m.', '9:00 a.m.', '10:00 a.m.', '11:00 a.m.',
-                  '12:00 p.m.', '1:00 p.m.', '2:00 p.m.', '3:00 p.m.', '4:00 p.m.', '5:00 p.m.',
-                  '6:00 p.m.', '7:00 p.m.', '8:00 p.m.', '9:00 p.m.', '10:00 p.m.', '11:00 p.m.'] %>
-      <%= f.label :timestart, 'Horario a presentarse', class: 'find-label' %>
-      <%= f.select(:timestart, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
-      <span>a</span>
-      <%= f.select(:timeend, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
-    </div>
-    <div class="find-row">
-      <%= f.label :timestart2, 'Segundo horario (opcional)', class: 'find-label' %>
-      <%= f.select(:timestart2, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
-      <span>a</span>
-      <%= f.select(:timeend2, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
-    </div>
-    <div class="find-row">
-      <%= f.label :days, 'Días en que puede presentarse', class: 'find-label' %>
-      <div class="flex-row">
-        <% days = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'] %>
-        <% days.each do |day| %>
-          <%= f.check_box :days, {multiple: true, class: 'find-checkbox'}, day, false %>
-          <%= f.fields_for :days do |d| %>
-            <%= d.label day, class: 'find-check' %>
+<div class="find-wrapper">
+  <%= form_for :receiver, url: receivers_path, html: {class: 'find-form'} do |f| %>
+
+    <div class="find-section">
+      <h3 class="find-subtitle">Datos del receptor</h3>
+      <div class="find-row">
+        <%= f.label :name, '¿Quién recibirá la sangre?', class: 'find-label' %>
+        <%= f.text_field :name, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :bloodtype, 'Tipo de sangre' %>
+        <%= f.select(:bloodtype,
+          options_for_select(
+            [
+              ['O+'], ['O-'],
+              ['A+'], ['A-'],
+              ['B+'], ['B-'],
+              ['AB+'], ['AB-']
+            ],
+          ), {}, class: 'find-field find-select') %>
+      </div>
+      <div class="find-row">
+        <%= f.label :donationtype, 'Tipo de donación', class: 'find-label' %>
+        <%= f.select(:donationtype,
+          options_for_select(
+            [
+              ['Sangre'],
+              ['Plaquetas'],
+              ['Sangre y plaquetas']
+            ],
+          ), {}, class: 'find-field find-select') %>
+      </div>
+      <div class="find-row">
+        <%= f.label :units, 'Unidades que necesita', class: 'find-label' %>
+        <%= f.text_field :units, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <% hours = ['12:00 a.m.', '1:00 a.m.', '2:00 a.m.', '3:00 a.m.', '4:00 a.m.', '5:00 a.m.',
+                    '6:00 a.m.', '7:00 a.m.', '8:00 a.m.', '9:00 a.m.', '10:00 a.m.', '11:00 a.m.',
+                    '12:00 p.m.', '1:00 p.m.', '2:00 p.m.', '3:00 p.m.', '4:00 p.m.', '5:00 p.m.',
+                    '6:00 p.m.', '7:00 p.m.', '8:00 p.m.', '9:00 p.m.', '10:00 p.m.', '11:00 p.m.'] %>
+        <%= f.label :timestart, 'Horario a presentarse', class: 'find-label' %>
+        <%= f.select(:timestart, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
+        <span>a</span>
+        <%= f.select(:timeend, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
+      </div>
+      <div class="find-row">
+        <%= f.label :timestart2, 'Segundo horario (opcional)', class: 'find-label' %>
+        <%= f.select(:timestart2, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
+        <span>a</span>
+        <%= f.select(:timeend2, options_for_select(hours), {include_blank: 'Hora'}, class: 'find-field find-time find-select') %>
+      </div>
+      <div class="find-row">
+        <%= f.label :days, 'Días en que puede presentarse', class: 'find-label' %>
+        <div class="flex-row">
+          <% days = ['lun', 'mar', 'mie', 'jue', 'vie', 'sab', 'dom'] %>
+          <% days.each do |day| %>
+            <%= f.check_box :days, {multiple: true, class: 'find-checkbox'}, day, false %>
+            <%= f.fields_for :days do |d| %>
+              <%= d.label day, class: 'find-check' %>
+            <% end %>
           <% end %>
-        <% end %>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="find-section">
-    <h3 class="find-subtitle">Lugar al que asistir para donar</h3>
-    <div class="find-row">
-      <%= f.label :hospital, 'Nombre del lugar', class: 'find-label' %>
-      <%= f.text_field :hospital, class: 'find-field' %>
+    <div class="find-section">
+      <h3 class="find-subtitle">Lugar al que asistir para donar</h3>
+      <div class="find-row">
+        <%= f.label :hospital, 'Nombre del lugar', class: 'find-label' %>
+        <%= f.text_field :hospital, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :street, 'Calle', class: 'find-label' %>
+        <%= f.text_field :street, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :number, 'Número', class: 'find-label' %>
+        <%= f.text_field :number, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :colony, 'Colonia', class: 'find-label' %>
+        <%= f.text_field :colony, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :zipcode, 'Código Postal', class: 'find-label' %>
+        <%= f.text_field :zipcode, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :state, 'Estado', class: 'find-label' %>
+        <%= f.select(:state,
+          options_for_select(
+            [
+              ['Aguascalientes'], ['Baja California'],  ['Baja California Sur'],
+              ['Campeche'],       ['CDMX'],             ['Chiapas'],
+              ['Chihuahua'],      ['Coahuila'],         ['Colima'],
+              ['Durango'],        ['Estado de México'], ['Guanajuato'],
+              ['Guerrero'],       ['Hidalgo'],          ['Jalisco'],
+              ['Michoacán'],      ['Morelos'],          ['Nayarit'],
+              ['Nuevo León'],     ['Oaxaca'],           ['Puebla'],
+              ['Querétaro'],      ['Quintana Roo'],     ['San Luis Potosí'],
+              ['Sinaloa'],        ['Sonora'],           ['Tabasco'],
+              ['Tamaulipas'],     ['Tlaxcala'],         ['Veracruz'],
+              ['Yucatán'],        ['Zacatecas']
+            ],
+          ), {include_blank: 'Estado'}, class: 'find-field find-select') %>
+      </div>
+      <div class="find-row">
+        <%= f.label :city, 'Municipio', class: 'find-label' %>
+        <%= f.text_field :city, class: 'find-field' %>
+      </div>
     </div>
-    <div class="find-row">
-      <%= f.label :street, 'Calle', class: 'find-label' %>
-      <%= f.text_field :street, class: 'find-field' %>
+    <div class="find-section">
+      <h3 class="find-subtitle">Persona(s) para contacto</h3>
+      <div class="find-row">
+        <%= f.label :contact, 'Nombre', class: 'find-label' %>
+        <%= f.text_field :contact, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :phone, 'Teléfono', class: 'find-label' %>
+        <%= f.telephone_field :phone, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :contact2, 'Nombre (opcional)', class: 'find-label' %>
+        <%= f.text_field :contact2, class: 'find-field' %>
+      </div>
+      <div class="find-row">
+        <%= f.label :phone2, 'Teléfono (opcional)', class: 'find-label' %>
+        <%= f.telephone_field :phone2, class: 'find-field' %>
+      </div>
     </div>
-    <div class="find-row">
-      <%= f.label :number, 'Número', class: 'find-label' %>
-      <%= f.text_field :number, class: 'find-field' %>
+    <div class="find-section">
+      <%= f.submit 'Enviar', class: 'find-submit flat-btn' %>
     </div>
-    <div class="find-row">
-      <%= f.label :colony, 'Colonia', class: 'find-label' %>
-      <%= f.text_field :colony, class: 'find-field' %>
-    </div>
-    <div class="find-row">
-      <%= f.label :zipcode, 'Código Postal', class: 'find-label' %>
-      <%= f.text_field :zipcode, class: 'find-field' %>
-    </div>
-    <div class="find-row">
-      <%= f.label :state, 'Estado', class: 'find-label' %>
-      <%= f.select(:state,
-        options_for_select(
-          [
-            ['Aguascalientes'], ['Baja California'],  ['Baja California Sur'],
-            ['Campeche'],       ['CDMX'],             ['Chiapas'],
-            ['Chihuahua'],      ['Coahuila'],         ['Colima'],
-            ['Durango'],        ['Estado de México'], ['Guanajuato'],
-            ['Guerrero'],       ['Hidalgo'],          ['Jalisco'],
-            ['Michoacán'],      ['Morelos'],          ['Nayarit'],
-            ['Nuevo León'],     ['Oaxaca'],           ['Puebla'],
-            ['Querétaro'],      ['Quintana Roo'],     ['San Luis Potosí'],
-            ['Sinaloa'],        ['Sonora'],           ['Tabasco'],
-            ['Tamaulipas'],     ['Tlaxcala'],         ['Veracruz'],
-            ['Yucatán'],        ['Zacatecas']
-          ],
-        ), {include_blank: 'Estado'}, class: 'find-field find-select') %>
-    </div>
-    <div class="find-row">
-      <%= f.label :city, 'Municipio', class: 'find-label' %>
-      <%= f.text_field :city, class: 'find-field' %>
-    </div>
-  </div>
-  <div class="find-section">
-    <h3 class="find-subtitle">Persona(s) para contacto</h3>
-    <div class="find-row">
-      <%= f.label :contact, 'Nombre', class: 'find-label' %>
-      <%= f.text_field :contact, class: 'find-field' %>
-    </div>
-    <div class="find-row">
-      <%= f.label :phone, 'Teléfono', class: 'find-label' %>
-      <%= f.telephone_field :phone, class: 'find-field' %>
-    </div>
-    <div class="find-row">
-      <%= f.label :contact2, 'Nombre (opcional)', class: 'find-label' %>
-      <%= f.text_field :contact2, class: 'find-field' %>
-    </div>
-    <div class="find-row">
-      <%= f.label :phone2, 'Teléfono (opcional)', class: 'find-label' %>
-      <%= f.telephone_field :phone2, class: 'find-field' %>
-    </div>
-  </div>
-  <div class="find-section">
-    <%= f.submit 'Enviar', class: 'find-submit flat-btn' %>
-  </div>
 
-<% end %>
+  <% end %>
+</div>

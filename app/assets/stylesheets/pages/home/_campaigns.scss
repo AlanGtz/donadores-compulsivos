@@ -3,7 +3,7 @@
   position: relative;
 
   .campaign-wave {
-    background: url('white-wave.svg') 0/cover no-repeat;
+    background: url('white-wave.svg') 0 100%/contain no-repeat;
     height: 60px;
     position: absolute;
     top: -22px;
@@ -73,7 +73,7 @@
       color: $red-blood;
       float: right;
       margin: 0;
-      padding-right: 50px;
+      padding: 5px 50px;
       text-transform: uppercase;
     }
   }

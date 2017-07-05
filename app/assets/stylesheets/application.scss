@@ -69,6 +69,10 @@
   'pages/sponsor_us',
   'pages/support_us';
 
-// 7. Themes
+// 7. Mobile styles
+@import
+  'mobile/header';
+
+// 8. Themes
 @import
   'themes/default';

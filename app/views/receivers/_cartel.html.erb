@@ -18,7 +18,11 @@
   <p class="cartel-address">Col. <%= @receiver.colony %> C.P. <%= @receiver.zipcode %></p>
   <p class="cartel-address"><%= @receiver.city %>, <%= @receiver.state %></p>
   <p class="cartel-days">¿Cuándo? &nbsp;<span><%= @receiver.days.join(', ') %></span></p>
-  <p class="cartel-time"><%= @receiver.timestart %> a <%= @receiver.timeend %><%= " / #{@receiver.timestart2}" %><%= " a #{@receiver.timeend2}" %></p>
+  <p class="cartel-time"><%= @receiver.timestart %> a <%= @receiver.timeend %>
+    <% if @receiver.timestart2.present? %>
+      <%= " / #{@receiver.timestart2}" %><%= " a #{@receiver.timeend2}" %>
+    <% end %>
+  </p>
   <div class="cartel-division">
   	<p class="cartel-label">Contacto:</p>
   </div>

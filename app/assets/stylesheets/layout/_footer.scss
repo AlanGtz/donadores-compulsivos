@@ -2,10 +2,14 @@
   background-color: $black;
   color: $white;
   position: relative;
-  height: 400px;
+  height: 560px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 400px;
+  }
 
   .footer-wave {
-  	background: url('wave.svg') 0/cover no-repeat;
+  	background: url('wave.svg') 0 100%/contain no-repeat;
   	height: 60px;
   	position: absolute;
   	top: -59px;
@@ -13,13 +17,21 @@
   }
 
   .footer-social {
-    @include make-sm-column(6);
-    @include make-sm-column-offset(3);
-
-    height: 130px;
+    @include make-xs-column(9);
+    @include make-xs-column-offset(1.5);
+    @include make-lg-column(6);
+    @include make-lg-column-offset(3);
 
   	.footer-item {
-  	  @include make-sm-column(4);
+  	  @include make-xs-column(4);
+
+      height: 90px;
+      margin-top: 20px;
+
+      @media (min-width: $screen-sm-min) {
+        height: 130px;
+        margin: 0;
+      }
   	}
   }
 }
@@ -33,10 +45,16 @@
 }
 
 .facebook-icon {
-  background: url('facebook.svg') center center no-repeat;
+  background: url('facebook.svg') center/10px 20px no-repeat;
   border-radius: 50%;
-  height: 90px;
-  width: 90px;
+  height: 45px;
+  width: 45px;
+
+  @media (min-width: $screen-sm-min) {
+    background: url('facebook.svg') center center no-repeat;
+    height: 90px;
+    width: 90px;
+  }
 }
 
 .footer-instagram {
@@ -48,10 +66,16 @@
 }
 
 .instagram-icon {
-  background: url('instagram.svg') center center no-repeat;
+  background: url('instagram.svg') center/20px no-repeat;
   border-radius: 50%;
-  height: 90px;
-  width: 90px;
+  height: 45px;
+  width: 45px;
+
+  @media (min-width: $screen-sm-min) {
+    background: url('instagram.svg') center center no-repeat;
+    height: 90px;
+    width: 90px;
+  }
 }
 
 .footer-twitter {
@@ -63,29 +87,42 @@
 }
 
 .twitter-icon {
-  background: url('twitter.svg') center center no-repeat;
+  background: url('twitter.svg') center/20px 15.5px no-repeat;
   border-radius: 50%;
-  height: 90px;
-  width: 90px;
+  height: 45px;
+  width: 45px;
+
+  @media (min-width: $screen-sm-min) {
+    background: url('twitter.svg') center center no-repeat;
+    height: 90px;
+    width: 90px;
+  }
 }
 
 .footer-snlink {
   @include centerer(true, false);
 
-  height: 90px;
-  width: 90px;
+  height: 45px;
+  width: 45px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 90px;
+    width: 90px;
+  }
 }
 
 .footer-column {
-  @include make-sm-column(4);
+  @include make-xs-column(9);
+  @include make-xs-column-offset(1.5);
 
   color: $white;
   margin-top: 10px;
 
-  .footer-center-col {
-  	@include centerer(true, false);
-
-    min-width: 235px;
+  @media (min-width: $screen-sm-min) {
+    @include make-sm-column(4);
+    @include make-sm-column-offset(0);
+    @include make-lg-column(3);
+    @include make-lg-column-offset(.75)
   }
 
   .footer-navigation {
@@ -98,7 +135,8 @@
   }
 
   .footer-title {
-  	font-size: 17px;
+    font-family: $medium;
+  	font-size: 12px;
   	font-weight: initial;
     margin: 0;
   	text-transform: uppercase;
@@ -106,21 +144,27 @@
 
   .footer-paragraph {
     font-family: $light;
-  	font-size: 12px;
+  	font-size: 10px;
 
   	a {
   	  color: $white;
   	}
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 12px;
+    }
   }
 
   .footer-teaminfo {
-    margin-top: 40px;
+    @media (min-width: $screen-sm-min) {
+      margin-top: 40px;
+    }
   }
 
   .footer-team {
     display: inline-block;
     font-family: $light;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
     margin: 8px 0;
 
@@ -128,6 +172,10 @@
       color: $white;
       font-weight: bold;
       text-decoration: underline;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 11px;
     }
   }
 

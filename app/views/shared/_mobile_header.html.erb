@@ -1,0 +1,14 @@
+<nav class="mobile-header">
+<%= link_to '', home_path, class: 'mobile-logo' %>
+  <label class="hamburguer">
+    <input class="flag" type="checkbox" name="button-flag" value="flag" hidden>
+    <span class="hamburguer-icon"></span>
+  	<ul class="mobile-navigation">
+  	  <li class="mobile-nav-link"><%= link_to 'Sobre DC', about_us_path %></li>
+  	  <li class="mobile-nav-link"><%= link_to 'Blog', 'https://medium.com/@DCompulsivos' %></li>
+  	  <li class="mobile-nav-link"><%= link_to 'Contacto', new_contact_path %></li>
+  	  <li class="mobile-nav-link"><%= link_to 'Preguntas frecuentes', faq_path %></li>
+  	  <li><%= link_to 'Quiero ayudar', support_us_path, class: 'mobile-ayudar-btn flat-btn' %></li>
+    </ul>
+  </label>
+</nav>
