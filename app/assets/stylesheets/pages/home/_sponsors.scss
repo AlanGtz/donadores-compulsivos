@@ -1,7 +1,7 @@
 .sponsors {
-  background: $red-blood url('sponsorus.png') 80%/cover no-repeat;
+  background: $red-blood url('sponsor-us-mobile.jpg') center/cover no-repeat;
 
-  @media (min-width: $screen-md-min) {
+  @media (min-width: $screen-sm-min) {
     background: $red-blood url('sponsorus.png') 80%/cover no-repeat;
   }
 }
