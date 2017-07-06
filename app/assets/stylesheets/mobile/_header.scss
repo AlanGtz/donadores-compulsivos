@@ -35,11 +35,11 @@
     margin-right: -160px;
     margin-top: 32px;
     overflow: hidden;
-    padding: 0 25px;
+    padding: 0;
     position: absolute;
     right: 0;
     transition: all .3s ease;
-    width: 160px;
+    width: 0px;
     z-index: 9;
 
     .mobile-nav-link {
@@ -96,6 +96,8 @@
 .flag {
   &:checked ~ .mobile-navigation {
     margin-right: 0;
+    padding: 0 25px;
+    width: 160px;
   }
 
   &:checked + .hamburguer-icon {

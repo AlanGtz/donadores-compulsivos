@@ -35,13 +35,17 @@
     padding: 13px;
 
     .support-card {
-      border-radius: 20px;
+      border-radius: 10px;
       color: $white;
       font-size: 26px;
       height: 100%;
       padding-bottom: 52%;
       text-align: center;
       width: 100%;
+
+      @media (min-width: $screen-sm-min) {
+        border-radius: 20px;
+      }
     }
 
     .support-card--title {
@@ -54,7 +58,7 @@
 
   .support-description {
     background-color: $red-blood;
-    border-radius: 20px;
+    border-radius: 10px;
     color: $white;
     display: none;
     font-family: $light;
@@ -64,6 +68,10 @@
     padding: 20px;
     position: absolute;
     width: calc(100% - 26px);
+
+    @media (min-width: $screen-sm-min) {
+      border-radius: 20px;
+    }
 
     @media (min-width: $screen-md-min) {
       font-size: 14px;
@@ -110,18 +118,18 @@
   }
 
   .support-card-1 {
-    background: url('support-card1.jpg') 0 0/100% no-repeat;
+    background: url('support-card1.png') 0 0/100% no-repeat;
   }
 
   .support-card-2 {
-    background: url('support-card2.jpg') 0 0/100% no-repeat;
+    background: url('support-card2.png') 0 0/100% no-repeat;
   }
 
   .support-card-3 {
-    background: url('support-card3.jpg') 0 0/100% no-repeat;
+    background: url('support-card3.png') 0 0/100% no-repeat;
   }
 
   .support-card-4 {
-    background: url('support-card4.jpg') 0 0/100% no-repeat;
+    background: url('support-card4.png') 0 0/100% no-repeat;
   }
 }
