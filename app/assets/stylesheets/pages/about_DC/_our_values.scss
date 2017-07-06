@@ -1,13 +1,13 @@
 .our-values {
   background-color: $black;
   position: relative;
-  z-index: -1;
 }
 
 .our-wave {
-  background: $red-blood url('wave.svg') 0/101% 64px no-repeat;
-  height: 60px;
+  background: transparent url('wave.svg') 0 100%/contain no-repeat;
+  height: 58px;
   position: absolute;
+  top: -56px;
   width: 100%;
 
   .about-play {
