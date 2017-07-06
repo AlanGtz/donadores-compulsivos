@@ -1,5 +1,6 @@
 .faq {
   background-color: $grey-bg;
+  overflow: auto;
   position: relative;
 }
 
@@ -27,7 +28,11 @@
   @include make-sm-column(8);
   @include make-sm-column-offset(2);
 
-  height: 65%;
+  margin-bottom: 60px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 65%;
+  }
 
   .faq-index {
     @include make-sm-column(3);

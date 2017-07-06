@@ -19,7 +19,9 @@
   .our-center {
   	@include centerer(true, true);
 
-  	min-width: 231px;
+    @media (min-width: $screen-md-min) {
+      min-width: 231px;
+    }
   }
 }
 
