@@ -1,5 +1,5 @@
 <nav class="dc-header">
-<%= link_to 'Logo', home_path, class: 'logo' %>
+<%= link_to '', home_path, class: 'logo' %>
   <div class="ayudar-btn"><%= link_to 'Quiero ayudar', support_us_path, class: 'flat-btn' %></div>
   <ul class="navigation">
   	<li class="nav-link"><%= link_to 'Sobre DC', about_us_path %></li>
@@ -8,3 +8,4 @@
   	<li class="nav-link"><%= link_to 'Preguntas frecuentes', faq_path %></li>
   </ul>
 </nav>
+<%= render 'shared/mobile_header' %>

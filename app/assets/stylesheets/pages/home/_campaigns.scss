@@ -3,30 +3,43 @@
   position: relative;
 
   .campaign-wave {
-    background: url('white-wave.svg') 0/cover no-repeat;
-    height: 60px;
+    background: url('white-wave.svg') 0 100%/contain no-repeat;
+    height: 58px;
     position: absolute;
-    top: -22px;
+    top: -56px;
     width: 100%;
   }
 }
 
 .campaign-container {
-  @include make-sm-column(9);
+  @include make-md-column(9);
 
-  height: 100%;
+  height: 80%;
+  padding: 0;
   position: relative;
+
+  @media (min-width: $screen-md-min) {
+    height: 100%
+  }
 }
 
 .campaign-title {
   color: $red-blood;
-  font-size: 35px;
+  font-size: 25px;
   font-weight: lighter;
+  margin: 0;
+  padding-top: 40px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 35px;
+    padding-top: 60px;
+  }
 }
 
 .campaign-navigation {
+  @include make-xs-column(12);
   @include make-sm-column(8);
   @include make-sm-column-offset(2);
   @include make-lg-column(6);
@@ -34,52 +47,72 @@
   @include centerer(false, true);
 
   height: 50%;
-  max-height: 350px;
 
   .campaign-month {
-  	@include make-sm-column(9.5);
+  	@include make-xs-column(9.5);
 
   	background-color: $white;
     border: solid 2px $red-blood;
   	border-radius: 20px;
   	color: $red-blood;
-  	height: 100%;
+    height: 100%;
   	overflow: hidden;
-  	padding: 0;
+  	padding: 10px 20px 5px;
+
+    @media (min-width: $screen-lg-min) {
+      padding: 15px 40px 10px;
+    }
 
   	.campaign-date {
   	  border-bottom: solid 1px $red-blood;
-  	  font-size: 28px;
+      font-family: $medium;
+  	  font-size: 16px;
   	  font-weight: lighter;
-  	  margin: 0 50px;
-  	  padding: 20px;
+  	  margin: 0;
+  	  padding: 0 10px 5px;
   	  text-align: center;
   	  text-transform: uppercase;
+
+      @media (min-width: $screen-md-min) {
+        font-size: 28px;
+      }
+
+      @media (min-width: $screen-lg-min) {
+        padding: 0 15px 10px;
+      }
   	}
 
   	.campaign-year {
 	  font-family: $light;
-  	  font-size: 18px;
+  	  font-size: 14px;
+
+      @media (min-width: $screen-md-min) {
+        font-size: 18px;
+      }
   	}
 
   	.campaign-description {
   	  font-family: $light;
-  	  font-size: 16px;
-      margin: 16px 0 0; 
-  	  padding: 10px 50px;
+  	  font-size: 12px;
+      margin: 0;
+  	  padding: 10px 0;
+
+      @media (min-width: $screen-md-min) {
+        font-size: 16px;
+        margin-top: 10px;
+      }
   	}
 
     .campaign-show {
       color: $red-blood;
       float: right;
-      margin: 0;
-      padding-right: 50px;
+      margin: 0 0 5px;
       text-transform: uppercase;
     }
   }
 
   [class*="campaign-side-"] {
-  	@include make-sm-column(1.25);
+  	@include make-xs-column(1.25);
 
   	height: 100%;
   	padding: 0;
@@ -137,14 +170,31 @@
 }
 
 .campaign-pictures {
-  @include make-sm-column(3);
+  @include make-md-column(3);
 
-  height: 100%;
+  height: 20%;
+  overflow: scroll;
   padding: 0;
+  white-space: nowrap;
+
+  @media (min-width: $screen-md-min) {
+    height: 100%;
+    white-space: normal;
+  }
 
   [class*="campaign-pic-"] {
-  	height: 25%;
+    display: inline-block;
+  	height: 100%;
+    margin-bottom: -4.3px;
+    margin-right: -4px;
+    min-width: 160px;
   	transition: all 0.5s;
+    width: 25%;
+
+    @media (min-width: $screen-md-min) {
+      height: 25%;
+      width: 100%;
+    }
   }
 
   [class*="campaign-pic-"]:hover {

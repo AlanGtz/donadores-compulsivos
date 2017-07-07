@@ -6,12 +6,16 @@
 
 .donate-title {
   color: $red-blood;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: lighter;
   margin: 0;
   padding: 60px 0 20px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 50px;
+  }
 }
 
 .donate-description {
@@ -31,13 +35,15 @@
   margin-top: 30px;
 
   .donate-item {
-  	@include make-sm-column(4);
+  	@include make-sm-column(6);
+    @include make-lg-column(4);
+
+    margin: 15px 0;
 
   	.donate-container {
   	  background-color: $red-blood;
   	  border-radius: 10px;
   	  height: 110px;
-  	  margin: 15px 0;
       transition: background 0.3s;
   	}
 
@@ -47,6 +53,7 @@
   	  font-size: 14px;
   	  font-weight: bold;
   	  line-height: 16px;
+      margin: 0;
   	  padding: 15px 10px 0;
   	  text-align: center;
   	}
@@ -54,7 +61,7 @@
   	.donate-answers {
   	  @include centerer(true,false);
 
-  	  bottom: 30px;
+  	  bottom: 15px;
   	  width: 188px;
   	}
   }
@@ -141,14 +148,20 @@
   background-color: $white;
   border-radius: 20px;
   font-family: $medium;
-  height: 287px;
-  margin: 40px 0 160px;
+  min-height: 287px;
+  margin: 40px 30px 160px;
 
   .whwb-title {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: lighter;
-    margin-top: 40px;
+    margin: 20px 0 0;
+    padding: 20px;
     text-align: center;
+
+    @media (min-width: $screen-md-min) {
+      font-size: 35px;
+      margin-top: 30px;
+    }
   }
 
   div:first-of-type {
@@ -167,6 +180,15 @@
       margin: 5px auto;
       width: 70px;
     }
+
+    .whwb-text {
+      font-size: 14px;
+      padding-bottom: 15px;
+
+      @media (min-width: $screen-md-min) {
+        font-size: 16px;
+      }
+    }
   }
 
   .whwb-arrow {
@@ -174,6 +196,10 @@
 
     background: url('whwb-arrow.svg') center center no-repeat;
     height: 80px;
+
+    @media (max-width: $screen-sm-min) {
+      transform: rotate(90deg);
+    }
   }
 
   .whwb-icon-1 {

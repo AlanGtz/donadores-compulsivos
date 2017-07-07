@@ -1,60 +1,100 @@
 .cover {
-  background: url('donadores-cover.png') center/cover no-repeat;
+  background: url('donadores-cover-mobile.jpg') center/cover no-repeat;
   height: 606px;
   position: relative;
+
+  @media (min-width: $screen-md-min) {
+    background: url('donadores-cover.png') center/cover no-repeat;
+  }
 }
 
 .cover-paragraph {
-  @include make-sm-column(5);
+  @include make-xs-column(10);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(8);
+  @include make-sm-column-offset(2);
+  @include make-md-column(5);
+  @include make-md-column-offset(0.5);
 
   color: $white;
   font-family: $light;
-  padding: 40px 0 0 60px;
+  padding: 30px 0 0;
+  text-align: center;
+
+  @media (min-width: $screen-md-min) {
+    text-align: left;
+  }
 
   .cover-title {
     font-family: $bold;
-    font-size: 50px;
+    font-size: 30px;
     font-weight: initial;
-    line-height: 50px;
+    line-height: 20px;
     margin: 5px 0;
     text-transform: uppercase;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 50px;
+      line-height: 40px;
+    }
   }
 
   .cover-text {
-    font-size: 18px;
+    @include make-md-column(8);
+
+    font-family: $roboto;
+    font-size: 16px;
     margin: 0;
+    padding: 0;
   }
 }
 
 .big-buttons {
-  @include centerer(true, false);
+  bottom: 40px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
 
-  bottom: 30px;
-  min-width: 660px;
-  width: 52%;
+  @media (min-width: $screen-md-min) {
+    bottom: 60px;
+    text-align: left;
+  }
 }
 
 .give-btn a, .receive-btn a {
   background-color: $red-blood;
-  border-radius: 15px;  
-  bottom: 15px;
+  border-radius: 10px;  
   color: $white;
   display: inline-block;
   font-size: 25px;
   font-weight: bold;
-  height: 70px;
-  line-height: 70px;
-  margin: 25px 15px;
-  padding: 0 10px;
+  line-height: 45px;
+  margin: 8px 15px;
+  padding: 0 8px;
   text-align: center;
   text-transform: uppercase;
-  width: 300px;
+  width: 258px;
+
+  @media (min-width: $screen-md-min) {
+    border-radius: 15px;  
+    line-height: 70px;
+    width: 300px;
+  }
 }
 
-.give-btn a {
-  float: left;
+.give-btn {
+  @include make-sm-column(6);
+
+  @media (min-width: $screen-md-min) {
+    a {
+      float: right;
+    }
+  }
 }
 
-.receive-btn a {
-  float: right;
+.receive-btn {
+  @include make-sm-column(6);
+
+  a {
+  }
 }

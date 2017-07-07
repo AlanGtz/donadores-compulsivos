@@ -5,13 +5,19 @@
 }
 
 .support-title {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: lighter;
-  line-height: 38px;
+  line-height: 20px;
   margin: 0;
-  padding: 60px 0 40px;
+  padding: 30px 0 40px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 50px;
+    line-height: 40px;
+    padding: 60px 0 40px;
+  }
 }
 
 .support-wrapper {
@@ -20,6 +26,7 @@
 
   margin-bottom: 160px;
   overflow: auto;
+  padding: 0;
 
   .support-space {
     @include make-sm-column(6);
@@ -28,13 +35,17 @@
     padding: 13px;
 
     .support-card {
-      border-radius: 20px;
+      border-radius: 10px;
       color: $white;
       font-size: 26px;
       height: 100%;
       padding-bottom: 52%;
       text-align: center;
       width: 100%;
+
+      @media (min-width: $screen-sm-min) {
+        border-radius: 20px;
+      }
     }
 
     .support-card--title {
@@ -46,32 +57,30 @@
   }
 
   .support-description {
-    background-color: transparent;
-    border-radius: 20px;
-    color: transparent;
+    background-color: $red-blood;
+    border-radius: 10px;
+    color: $white;
+    display: none;
     font-family: $light;
-    font-size: 16px;
+    font-size: 10px;
     height: calc(100% - 26px);
+    line-height: 14px;
     padding: 20px;
     position: absolute;
     width: calc(100% - 26px);
 
-    &:hover {
-      background-color: $red-blood;
-      color: $white;
-      line-height: 25px;
+    @media (min-width: $screen-sm-min) {
+      border-radius: 20px;
+    }
 
-      .support-btn {
-        background-color: $white;
-        border: solid 2px $white;
-        border-radius: 5px;
-        color: $red-blood;
+    @media (min-width: $screen-md-min) {
+      font-size: 14px;
+      line-height: 18px;
+    }
 
-        &:hover {
-          background-color: transparent;
-          color: $white;
-        }
-      }
+    @media (min-width: $screen-lg-min) {
+      font-size: 16px;
+      line-height: 22px;
     }
 
     .support-paragraph {
@@ -92,19 +101,35 @@
     }
   }
 
+  .support-visible {
+    display: block;
+
+    .support-btn {
+      background-color: $white;
+      border: solid 2px $white;
+      border-radius: 5px;
+      color: $red-blood;
+
+      &:hover {
+        background-color: transparent;
+        color: $white;
+      }
+    }
+  }
+
   .support-card-1 {
-    background: url('support-card1.jpg') 0 0/100% no-repeat;
+    background: url('support-card1.png') 0 0/100% no-repeat;
   }
 
   .support-card-2 {
-    background: url('support-card2.jpg') 0 0/100% no-repeat;
+    background: url('support-card2.png') 0 0/100% no-repeat;
   }
 
   .support-card-3 {
-    background: url('support-card3.jpg') 0 0/100% no-repeat;
+    background: url('support-card3.png') 0 0/100% no-repeat;
   }
 
   .support-card-4 {
-    background: url('support-card4.jpg') 0 0/100% no-repeat;
+    background: url('support-card4.png') 0 0/100% no-repeat;
   }
 }

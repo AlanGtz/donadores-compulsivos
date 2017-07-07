@@ -1,0 +1,116 @@
+.mobile-header {
+  background-color: $black;
+  display: block;
+  height: 42px;
+  width: 100%;
+
+  @media (min-width: $screen-lg-min) {
+    display: none;
+  }
+
+  .mobile-logo {
+    background: url('donadores-logo.svg') center/cover no-repeat;
+    display: inline-block;
+    height: 22px;
+    margin-left: 15px;
+    margin-top: 10px;
+    width: 157px;
+  }
+
+  .hamburguer {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    height: 20px;
+    margin-top: 10px;
+    padding-right: 15px;
+    position: relative;
+    width: 45px;
+  }
+
+  .mobile-navigation {
+    background-color: $white;
+    height: 244px;
+    list-style: none;
+    margin-right: -160px;
+    margin-top: 32px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    transition: all .3s ease;
+    width: 0px;
+    z-index: 9;
+
+    .mobile-nav-link {
+     font-family: $medium;
+     font-size: 11px;
+     margin: 27px 0;
+     text-align: right;
+     text-transform: uppercase;
+    }
+
+    .mobile-ayudar-btn {
+     border-radius: 3px;
+     float: right;
+     font-family: $medium;
+     font-size: 9px;
+     font-weight: bold;
+     padding: 7px 13.5px 4px;
+     text-transform: uppercase;
+    }
+  }
+
+  .hamburguer-icon {
+    background-color: $white;
+    bottom: 0;
+    height: 2px;
+    left: 0;
+    margin: auto 0;
+    position: absolute;
+    right: 0;
+    transition: background 0s .25s;
+    top: 0;
+    width: 30px;
+
+    &:before, &:after {
+     background-color: $white;
+     content: '';
+     height: inherit;
+     position: absolute;
+     transition-delay: .25s, 0s;
+     transition-duration: .25s, .25s;
+     width: inherit;
+    }
+
+    &:before {
+     top: -7.5px;
+    }
+
+    &:after {
+     bottom: -7.5px;
+    }
+  }
+}
+
+.flag {
+  &:checked ~ .mobile-navigation {
+    margin-right: 0;
+    padding: 0 25px;
+    width: 160px;
+  }
+
+  &:checked + .hamburguer-icon {
+    background-color: transparent;
+
+    &:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    &:after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

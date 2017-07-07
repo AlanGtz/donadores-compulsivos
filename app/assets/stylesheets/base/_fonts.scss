@@ -33,3 +33,15 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: font-url( asset-path('roboto-regular.eot'));
+    src: font-url( asset-path('roboto-regular.eot?#iefix')) format('embedded-opentype'),
+         font-url( asset-path('roboto-regular.woff2')) format('woff2'),
+         font-url( asset-path('roboto-regular.woff')) format('woff'),
+         font-url( asset-path('roboto-regular.ttf')) format('truetype'),
+         font-url( asset-path('roboto-regular.svg#robotoregular')) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -16,6 +16,12 @@ body {
   margin: 0 auto;
 }
 
+section {
+  @media (max-width: $screen-sm-min) {
+    min-height: 568px;
+  }
+}
+
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
  * Since `*` has a specificity of 0, it does not override the `html` value

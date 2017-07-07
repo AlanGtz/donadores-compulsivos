@@ -1,34 +1,57 @@
 .sponsors {
-  background: $red-blood url('sponsorus.png') 80%/cover no-repeat;
+  background: $red-blood url('sponsor-us-mobile.jpg') center/cover no-repeat;
+
+  @media (min-width: $screen-sm-min) {
+    background: $red-blood url('sponsorus.png') 80%/cover no-repeat;
+  }
 }
 
 .brands {
-  height: 650px;
+  height: 100%;
   position: relative;
   width: 100%;
 }
 
 .sponsor-wrapper {
-  @include make-sm-column(4);
-  @include make-sm-column-offset(2);
-  @include centerer(false,true);
+  @include make-xs-column(8);
+  @include make-xs-column-offset(2);
+  @include make-sm-column(6);
+  @include make-sm-column-offset(0.5);
+  @include make-md-column(4.5);
+  @include make-md-column-offset(1.5);
+
+  @media (min-width: $screen-sm-min) {
+    @include centerer(false,true);
+  }
 }
 
 .sponsor-title {
   color: $red-blood;
-  font-size: 45px;
+  font-size: 22px;
   font-weight: lighter;
-  line-height: 35px;
-  margin: 0;
+  line-height: 20px;
+  margin: 20px 0 0;
   text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 45px;
+    line-height: 35px;
+    margin: 0;
+  }
 }
 
 .sponsor-paragraph {
   @include make-sm-column(10);
 
+  font-size: 13px;
   font-family: $light;
-  margin-bottom: 30px;
+  margin: 8px 0 25px;
   padding: 0;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 16px;
+    margin: 13px 0 30px;
+  }
 }
 
 .sponsor-btn {
@@ -37,10 +60,15 @@
   border-radius: 4px;
   color: $red-blood;
   font-family: $medium;
-  font-size: 18px;
+  font-size: 12px;
   font-weight: bold;
-  padding: 10px 13px 8px;
+  padding: 8px 11px 6px;
   text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 18px;
+    padding: 10px 13px 8px;
+  }
 
   &:hover {
     color: $white;

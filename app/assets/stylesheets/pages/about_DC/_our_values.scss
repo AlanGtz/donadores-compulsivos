@@ -1,29 +1,11 @@
 .our-values {
   background-color: $black;
+  overflow: hidden;
   position: relative;
 }
 
-.our-wave {
-  background: $red-blood url('wave.svg') 0/101% 64px no-repeat;
-  height: 60px;
-  position: absolute;
-  width: 100%;
-
-  .about-play {
-    @include centerer(true, false);
-
-    background: $white url('play-about.svg') 58px 21.5px/38px 38px no-repeat;
-    border-radius: 20px;
-    display: block;
-    height: 80px;
-    top: -20px;
-    width: 144px;
-    z-index: 100;
-  }
-}
-
 .our-left {
-  @include make-sm-column(6);
+  @include make-xs-column(6);
 
   height: 100%;
 
@@ -35,16 +17,20 @@
   	color: $white;
   	margin-right: 10px;
   	max-width: 300px;
-  	padding: 40px 0 40px 30px;
+  	padding: 20px 0 20px 10px;
   	position: absolute;
   	right: 0;
   	text-align: right;
   	width: 80%;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 40px 0 40px 30px;
+    }
   }
 }
 
 .our-right {
-  @include make-sm-column(6);
+  @include make-xs-column(6);
 
   height: 100%;
 
@@ -57,20 +43,32 @@
   	left: 0;
   	margin-left: 10px;
   	max-width: 300px;
-  	padding: 40px 30px 40px 0;
+  	padding: 20px 10px 20px 0;
   	position: absolute;
   	width: 80%;
+
+    @media (min-width: $screen-sm-min) {
+      padding: 40px 30px 40px 0;
+    }
   }
 }
 
 .our-title {
-  font-size: 50px;
+  font-size: 30px;
   font-weight: lighter;
   margin: 0;
   text-transform: uppercase;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 50px;
+  }
 }
 
 .our-paragraph {
-  font-family: $light;
-  font-size: 18px;
+  font-family: $roboto;
+  font-size: 12px;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 18px;
+  }
 }

@@ -1,14 +1,17 @@
 .our-numbers {
   background-color: $black;
-  height: 200px;
+  height: 100px;
+
+  @media (min-width: $screen-sm-min) {
+    height: 200px;
+  }
 }
 
 .our-item {
-  @include make-sm-column(4);
+  @include make-xs-column(4);
 
   display: inline-block;
-  height: 200px;
-  margin-right: -4px;
+  height: 100%;
   padding: 0;
   position: relative;
   text-align: center;
@@ -16,15 +19,20 @@
   .our-center {
   	@include centerer(true, true);
 
-  	height: 100px;
-  	min-width: 231px;
+    @media (min-width: $screen-md-min) {
+      min-width: 231px;
+    }
   }
 }
 
 .our-icon {
-  display: inline-block;
+  display: none;
   height: 100px;
   width: 78px;
+
+  @media (min-width: $screen-md-min) {
+    display: inline-block;
+  }
 }
 
 .our-icon-1 {
@@ -42,22 +50,37 @@
 .our-text {
   color: $white;
   display: inline-block;
-  float: right;
   font-weight: lighter;
-  margin-left: 15px;
+
+  @media (min-width: $screen-md-min) {
+    float: right;
+    margin-left: 15px;
+  }
 
   .our-number {
   	border-bottom: solid 1px $white;
-  	font-size: 30px;
-    line-height: 40px;
-  	margin: 0 10px;
+    font-family: $medium;
+  	font-size: 20px;
+    line-height: 28px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 30px;
+      line-height: 40px;
+      margin: 0 10px;
+    }
   }
 
   .our-description {
     font-family: $light;
-  	font-size: 20px;
-    line-height: 25px;
-    padding-top: 10px;
+  	font-size: 12px;
+    line-height: 14px;
+    padding-top: 5px;
   	text-transform: uppercase;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 20px;
+      line-height: 25px;
+      padding-top: 10px;
+    }
   }
 }

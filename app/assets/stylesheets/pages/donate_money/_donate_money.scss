@@ -1,27 +1,35 @@
 .donate-options {
   background-color: $red-blood;
   overflow: auto;
+  padding: 0 15px;
   width: 100%;
 }
 
 .money-title {
   color: $white;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: lighter;
   margin: 0;
-  padding: 60px 0 40px;
+  padding: 30px 0 40px;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $screen-md-min) {
+    font-size: 50px;
+    padding: 60px 0 40px;
+  }
 }
 
 .money-wrapper {
-  @include make-sm-column(6);
-  @include make-sm-column-offset(3);
+  @include make-sm-column(10);
+  @include make-sm-column-offset(1);
+  @include make-lg-column(6);
+  @include make-lg-column-offset(3);
 
   background-color: $white;
   border-radius: 20px;
-  height: 300px;
   margin-bottom: 20px;
+  overflow: hidden;
   padding: 15px 15px;
 
   .money-subtitle {
