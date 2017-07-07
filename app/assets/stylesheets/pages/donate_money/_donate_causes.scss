@@ -2,6 +2,10 @@
   background-color: $red-blood;
   overflow: auto;
   width: 100%;
+
+  .causes-wrapper:last-child {
+    margin-bottom: 80px;
+  }
 }
 
 .causes-title {
@@ -80,6 +84,12 @@
   .causes-desc-2 {
     @media (min-width: $screen-md-min) {
       float: right;
+    }
+  }
+
+  .causes-desc-2 {
+    @media (min-width: $screen-md-min) {
+      margin-bottom: 60px;
     }
   }
 
