@@ -1,0 +1,37 @@
+.download-wrapper {
+  @include make-lg-column(4);
+
+  color: $nimbus;
+  display: inline-block;
+  font-family: $medium;
+  font-weight: lighter;
+  margin: 60px 60px 160px;
+  padding: 0 15px;
+
+  .download-title {
+    font-size: 50px;
+    font-weight: lighter;
+    line-height: 45px;
+    margin: 0 0 20px;
+  }
+
+  .download-text {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  .download-btn {
+    background-color: $black;
+    border-radius: 4px;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    padding: 12px 35px 10px 37px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $red-blood;
+    }
+  }
+}
