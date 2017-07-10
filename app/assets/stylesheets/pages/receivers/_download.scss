@@ -5,19 +5,46 @@
   display: inline-block;
   font-family: $medium;
   font-weight: lighter;
-  margin: 60px 60px 160px;
-  padding: 0 15px;
+  margin: 30px 15px 60px;
+  padding: 0;
+  text-align: center;
+
+  @media (min-width: $screen-lg-min) {
+    margin: 60px 15px 160px 60px;
+    text-align: left;
+  }
 
   .download-title {
-    font-size: 50px;
+    font-size: 25px;
     font-weight: lighter;
-    line-height: 45px;
-    margin: 0 0 20px;
+    line-height: 25px;
+    margin: 0 0 15px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 30px;
+      line-height: 25px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 50px;
+      line-height: 45px;
+      margin: 0 0 20px;
+    }
   }
 
   .download-text {
     font-size: 18px;
-    padding: 10px 0;
+    padding: 0;
+    margin: 0 0 15px;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: 14px;
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: 18px;
+      margin: 0 0 25px;
+    }
   }
 
   .download-btn {
