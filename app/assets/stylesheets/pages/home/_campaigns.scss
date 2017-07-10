@@ -3,7 +3,7 @@
   position: relative;
 
   .campaign-wave {
-    background: url('white-wave.svg') 0 100%/contain no-repeat;
+    background: url('white-wave.png') 0 100%/contain no-repeat;
     height: 58px;
     position: absolute;
     top: -56px;
@@ -47,6 +47,7 @@
   @include centerer(false, true);
 
   height: 50%;
+  max-height: 360px;
 
   .campaign-month {
   	@include make-xs-column(9.5);

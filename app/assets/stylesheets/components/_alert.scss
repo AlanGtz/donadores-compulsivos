@@ -1,14 +1,25 @@
 .alert {
-  font-size: 20px;
-  height: 60px;
+  font-size: 14px;
+  height: 42px;
   left: 0;
-  line-height: 60px;
+  line-height: 20px;
   position: fixed;
   text-align: center;
   text-transform: uppercase;
   top: 0;
   width: 100%;
   z-index: 9999999;
+
+  @media (min-width: $screen-sm-min) {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $screen-lg-min) {
+    font-size: 20px;
+    height: 60px;
+    line-height: 60px;
+  }
 }
 
 .alert-success {
