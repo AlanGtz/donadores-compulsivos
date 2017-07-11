@@ -1,7 +1,7 @@
 .sponsors {
   background: $red-blood url('sponsor-us-mobile.jpg') center/cover no-repeat;
 
-  @media (min-width: $screen-sm-min) {
+  @media (min-width: $screen-md-min) {
     background: $red-blood url('sponsorus.png') 80%/cover no-repeat;
   }
 }
@@ -15,13 +15,23 @@
 .sponsor-wrapper {
   @include make-xs-column(8);
   @include make-xs-column-offset(2);
-  @include make-sm-column(6);
-  @include make-sm-column-offset(0.5);
   @include make-md-column(4.5);
-  @include make-md-column-offset(1.5);
+  @include make-md-column-offset(1);
+
+  margin-top: 20px;
 
   @media (min-width: $screen-sm-min) {
+    margin-top: 60px;
+  }
+
+  @media (min-width: $screen-md-min) {
+    margin-top: 100px;
+  }
+
+  @media (min-width: $screen-lg-min) {
     @include centerer(false,true);
+
+    margin-top: 0;
   }
 }
 
@@ -30,18 +40,17 @@
   font-size: 22px;
   font-weight: lighter;
   line-height: 20px;
-  margin: 20px 0 0;
+  margin: 0;
   text-transform: uppercase;
 
   @media (min-width: $screen-sm-min) {
     font-size: 45px;
     line-height: 35px;
-    margin: 0;
   }
 }
 
 .sponsor-paragraph {
-  @include make-sm-column(10);
+  @include make-lg-column(8.5);
 
   font-size: 13px;
   font-family: $light;
@@ -59,6 +68,7 @@
   border: solid 2px $red-blood;
   border-radius: 4px;
   color: $red-blood;
+  display: inline-block;
   font-family: $medium;
   font-size: 12px;
   font-weight: bold;

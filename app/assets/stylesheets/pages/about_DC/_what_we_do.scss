@@ -3,6 +3,15 @@
   color: $white;
   position: relative;
 
+  .about-wrapper {
+    @media (min-width: $screen-lg-min) {
+      @include centerer(false,true);
+
+      height: 570px;
+      width: 100%;
+    }
+  }
+
   .about-title {
     @include make-xs-column-offset(0.5);
     @include make-sm-column-offset(2);
@@ -59,7 +68,7 @@
     }
 
     @media (min-width: $screen-lg-min) {
-      bottom: 30px;
+      top: 450px;
     }
   }
 

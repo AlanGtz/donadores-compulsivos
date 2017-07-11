@@ -6,7 +6,7 @@
   <%= form_for :receiver, url: receivers_path, html: {class: 'find-form'} do |f| %>
 
     <div class="find-section">
-      <h3 class="find-subtitle">Datos del receptor</h3>
+      <h3 class="find-subtitle">Datos del paciente</h3>
       <div class="find-row">
         <%= f.label :name, '¿Quién recibirá la sangre?', class: 'find-label' %>
         <%= f.text_field :name, class: 'find-field' %>
