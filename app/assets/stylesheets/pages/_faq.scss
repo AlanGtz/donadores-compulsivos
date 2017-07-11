@@ -3,6 +3,10 @@
   overflow: auto;
   position: relative;
   width: 100%;
+
+  @media (min-width: $screen-sm-min) {
+    overflow: visible;
+  }
 }
 
 .faq-title {
@@ -67,6 +71,12 @@
     font-family: $light;
     height: 100%;
     overflow: hidden;
+
+    @media (min-width: $screen-sm-min) {
+      .faq-answer:last-child {
+        height: 500px;
+      }
+    }
   }
 
   .faq-active {
