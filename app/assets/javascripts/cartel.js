@@ -8,7 +8,7 @@ function screenshot() {
   $("#btn-Convert-Html2Image").on('click', function () {
     html2canvas(element, {
       onrendered: function (canvas) {
-        Canvas2Image.saveAsPNG(canvas);
+        Canvas2Image.saveAsJPEG(canvas);
       }
     });
   });
