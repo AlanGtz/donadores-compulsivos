@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).load(function() {
   screenshot();
 });
 
@@ -12,7 +12,7 @@ function screenshot() {
       $(element).css('display','none')
 
       $(button).on('click', function () {
-        canvas.toBlob(function(blob) {
+        canvas.toBlobHD(function(blob) {
           saveAs(blob, "cartel.png");
         });
       });
