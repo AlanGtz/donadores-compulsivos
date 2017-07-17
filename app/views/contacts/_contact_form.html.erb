@@ -8,7 +8,7 @@
           [
             ['Contacto'],['Donación de material'],['Donación de alimentos'],
             ['Donadores trabajando'],['Donadores estudiando'],['Replica en tu ciudad']
-          ],
+          ], params[:subject]
         ), {include_blank: 'Asunto'}, class: 'contact-field contact-select') %>
   	  <%= f.telephone_field :phone, class: 'contact-field', placeholder: 'Teléfono' %>
   	  <%= f.email_field :email, class: 'contact-field', placeholder: 'e-mail' %>
