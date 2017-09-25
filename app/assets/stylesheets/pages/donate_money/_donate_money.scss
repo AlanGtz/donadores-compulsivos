@@ -32,6 +32,15 @@
   overflow: hidden;
   padding: 15px 15px;
 
+  .money-desc {
+    line-height: 1.8em;
+    text-align: center;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
   .money-subtitle {
     color: $red-blood;
     font-size: 22px;
