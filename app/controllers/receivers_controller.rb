@@ -6,21 +6,21 @@ class ReceiversController < ApplicationController
 
     case @bloodtype
       when 'O+'
-        @bloodtypes = ['O+','O-']
+        @bloodtypes = ['O+']
       when 'O-'
         @bloodtypes = ['O-']
       when 'A+'
-        @bloodtypes = ['A+','A-','O+','O-']
+        @bloodtypes = ['A+']
       when 'A-'
-        @bloodtypes = ['A-','O-']
+        @bloodtypes = ['A-']
       when 'B+'
-        @bloodtypes = ['B+','B-','O+','O-']
+        @bloodtypes = ['B+']
       when 'B-'
-        @bloodtypes = ['B-','O-']
+        @bloodtypes = ['B-']
       when 'AB+'
-        @bloodtypes = ['AB+','AB-','A+','A-','B+','B-','O+','O-']
+        @bloodtypes = ['AB+']
       when 'AB-'
-        @bloodtypes = ['AB-','A-','B-','O-']
+        @bloodtypes = ['AB-']
     end
   end
 
@@ -29,7 +29,7 @@ class ReceiversController < ApplicationController
 
   def create
     @receiver = Receiver.new(receiver_params)
-   
+
     if @receiver.save
       redirect_to @receiver
     else
